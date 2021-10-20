@@ -22,8 +22,26 @@ class LoginController
     }
 
 
-    public function error()
+    public function signIn()
     {
-        require_once('Public/Views/errors/404.php');
+        if ($_POST) {
+            if (empty($_POST['txtEmail']) || empty($_POST['txtPass'])) {
+                $arrResponse = ['status' => false, 'msg', 'Todos los campos son requeridos !!'];
+            } else {
+                $login = new Login();
+                $user = trim($_POST['txtEmail']);
+                $password = trim($_POST['txtPass']);
+
+                $request = $login->signIn($user, $password);
+
+                if (!empty($request)) {
+                    $arrResponse = ['status' =>  true, 'msg' => 'ok'];
+                } else {
+                    $arrResponse = ['status' => false, 'msg' => 'Usuario o contraseñas incorrectas. Por favor intenta nuevamente !!'];
+                }
+            }
+            echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+        }
+        die();
     }
 }

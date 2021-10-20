@@ -44,7 +44,7 @@ class Crud
     /**
      * Encontrar un elemento en la base de datos.
      * @param string $sql Sentencia SQL que se va a procesar y ejecutar en el gestor de base de datos.
-     * @return 
+     * @return Object 
      */
     public function find(string $sql)
     {

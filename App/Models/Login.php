@@ -1,6 +1,6 @@
 <?php
 
-require_once('../Core/Crud.php');
+require_once('App/Core/Crud.php');
 class Login extends Crud
 {
     public function __construct()
@@ -12,7 +12,7 @@ class Login extends Crud
     {
         $sql = "SELECT id, correo, pass
                 FROM datospersonales
-                WHERE correo = ${$user} AND pass = ${$password}";
+                WHERE correo = '$user' AND pass = '$password'";
         return $this->find($sql);
     }
 }
