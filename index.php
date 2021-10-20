@@ -5,7 +5,6 @@ require_once('App/Helpers/Helpers.php');
 require_once('Config/Conection.php');
 require_once('Config/Config.php');
 require_once('App/Core/Routes.php');
-require_once('vendor/autoload.php');
 //redireccionar a la vista de Pagina de Inicio 
 
 if (isset($_GET['c'])) {

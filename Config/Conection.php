@@ -11,7 +11,7 @@ class Database
      */
     public static function Conectar()
     {
-        $host = 'localhost';
+        $host = 'localhost:3306';
         $user = 'root';
         $password = '';
         $db_name = 'financial_fast';
