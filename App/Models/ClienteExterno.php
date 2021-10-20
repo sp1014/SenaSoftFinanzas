@@ -27,4 +27,10 @@ class ClienteExterno extends Crud
             return 'exists';
         }
     }
+
+    public function getCategorias()
+    {
+        $sql = "SELECT id, nombre FROM categoria";
+        return $this->all($sql);
+    }
 }

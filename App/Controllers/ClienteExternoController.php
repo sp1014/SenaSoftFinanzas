@@ -20,7 +20,47 @@ class ClienteExternoController
 
     public function insert()
     {
-        print_r($_POST);
-        exit();
+        if ($_POST) {
+            if (empty($_POST['txtCategoria'])) {
+                $arrResp = ['status' => false, 'msg' => 'Todos los campos son obligatorios !!'];
+            } else {
+                $model = new ClienteExterno();
+                $categorie = trim($_POST['txtCategoria']);
+                $datosPersonales =  '1'; //$_SESSION['sessionLogin']
+                //guardar datos de la foto
+                $foto = $_FILES['txtFile'];
+                $nameFoto = $foto['name'];
+                $filePdf = 'file_' . md5(date('d-m-Y H:m:s')) . '.pdf';
+
+                $request = $model->new($filePdf, $datosPersonales, $categorie);
+                if (intval($request) > 0) {
+                    //cargar y guardar la imagen en el servidor
+                    //Almacenar la imagen en la carpeta del servidor
+                    if (!empty($nameFoto)) {
+                        uploadImages($foto, $filePdf, $categorie);
+                    }
+                    $arrResp = ['status' => true, 'msg' => 'Transacción realizada con exito :)'];
+                } elseif ($request == 'exists') {
+                    $arrResp = ['status' => false, 'msg' => 'Este usuario ya tiene asociado un archivo con este nombre.'];
+                } else {
+                    $arrResp = ['status' => false, 'msg' => 'Ha ocurrido un error. Por favor intente nuevamente'];
+                }
+            }
+            echo json_encode($arrResp, JSON_UNESCAPED_UNICODE);
+        }
+        die();
+    }
+
+    public function getCategorias()
+    {
+        $model = new ClienteExterno();
+        $request = $model->getCategorias();
+        if (!empty($request)) {
+            $arrResp = ['status' => true, 'data' => $request];
+        } else {
+            $arrResp = ['status' => false, 'data' => 'no'];
+        }
+        echo json_encode($arrResp, JSON_UNESCAPED_UNICODE);
+        die();
     }
 }
