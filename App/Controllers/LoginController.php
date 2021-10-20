@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Controla el inicio de sesión.
+ */
 class LoginController
 {
     /**
@@ -15,6 +18,12 @@ class LoginController
     public function index()
     {
         $data['tittle'] = 'Iniciar sesión | Finanzal Fast';
-        require_once('Public/Views/index.php');
+        require_once('Public/Views/signIn/login.php');
+    }
+
+
+    public function error()
+    {
+        require_once('Public/Views/errors/404.php');
     }
 }

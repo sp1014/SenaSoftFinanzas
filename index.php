@@ -1,6 +1,5 @@
 <?php
 
-header('Location: Public/Views/');
 require_once('App/Helpers/Helpers.php');
 require_once('Config/Conection.php');
 require_once('Config/Config.php');
