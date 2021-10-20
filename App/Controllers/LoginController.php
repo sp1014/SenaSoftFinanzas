@@ -21,7 +21,6 @@ class LoginController
         require_once('Public/Views/signIn/login.php');
     }
 
-
     public function signIn()
     {
         if ($_POST) {
@@ -35,6 +34,9 @@ class LoginController
                 $request = $login->signIn($user, $password);
 
                 if (!empty($request)) {
+                    $_SESSION['id'] = $request['id'];
+                    $_SESSION['sessionLogin'] = $request;
+                    $_SESSION['login'] = true;
                     $arrResponse = ['status' =>  true, 'msg' => 'ok'];
                 } else {
                     $arrResponse = ['status' => false, 'msg' => 'Usuario o contraseñas incorrectas. Por favor intenta nuevamente !!'];
