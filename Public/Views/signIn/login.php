@@ -57,7 +57,6 @@
     ?>
     
     <!-- jQuery  -->
-<<<<<<< HEAD
     <script src="../../Assets/js/jquery.min.js" ></script>
     <script src="../../Assets/js/bootstrap.bundle.min.js" ></script>
     <script src="../../Assets/js/metismenu.min.js" ></script>
@@ -78,16 +77,6 @@
             });
         </script>
    
-=======
-    <script src="Public/Assets/js/jquery.min.js" defer></script>
-    <script src="Public/Assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="Public/Assets/js/metismenu.min.js" defer></script>
-    <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
-    <script src="Public/Assets/js/waves.min.js" defer></script>
-    <!-- App js -->
-    <script src="Public/Assets/js/app.js" defer></script>
-    <script src="Public/Assets/js/functions/signIn.js" defer></script>
->>>>>>> e61dddf6c395f9bef7ba961eeee9c48acf83a0bc
 </body>
 
 
