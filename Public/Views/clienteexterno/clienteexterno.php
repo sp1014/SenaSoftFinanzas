@@ -16,6 +16,9 @@
 </head>
 
 <body>
+    <?php
+    require_once('Public/Views/vector/header.php');
+    ?>
     <!-- Begin page -->
     <div class="accountbg">
         <div class="wrapper-page">
@@ -53,6 +56,7 @@
     </div>
     <!-- END wrapper -->
     <?php
+    require_once('Public/Views/vector/footer.php');
     require_once('Public/Views/components/scripts.php');
     ?>
     <!-- jQuery  -->
