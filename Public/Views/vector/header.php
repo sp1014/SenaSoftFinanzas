@@ -259,6 +259,3 @@
                 </div>
                 <!-- end page-title -->
             </div>
-        </div>
-    </div>
-</div>
