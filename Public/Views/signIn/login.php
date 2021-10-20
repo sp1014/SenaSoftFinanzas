@@ -25,7 +25,7 @@
                     <a class="logo logo-admin"><img src="Public/Assets/images/Logo.png" height="60" width="240px"></a>
                     </div>
                     <h5 class="font-18 text-center">Iniciar Sesión</h5>
-                    <form  class="form-horizontal m-t-30" id="signIn">
+                    <form class="form-horizontal m-t-30" id="signIn">
                         <div class="form-group">
                             <div class="col-12">
                                 <label>Correo</label>
@@ -51,11 +51,9 @@
         </div>
     </div>
     <!-- END wrapper -->
-    
     <?php
     require_once('Public/Views/components/scripts.php');
     ?>
-    
     <!-- jQuery  -->
     <script src="Public/Assets/js/jquery.min.js" ></script>
     <script src="Public/Assets/js/bootstrap.bundle.min.js" ></script>
@@ -65,17 +63,15 @@
 
     <!-- Parsley js -->
     <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
-
-
     <!-- App js -->
-    <script src="Public/Assets/js/app.js" ></script>
+    <script src="Public/Assets/js/app.js" defer></script>
+    <script src="Public/Assets/js/functions/signIn.js" defer></script>
 
-    <script>
-            $(document).ready(function() {
-                $('form').parsley();
-            });
-        </script>
-   
+    <script defer>
+        $(document).ready(function() {
+            $('form').parsley();
+        });
+    </script>
 </body>
 
 

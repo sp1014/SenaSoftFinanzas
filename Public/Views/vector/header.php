@@ -95,7 +95,7 @@
                 <li class="dropdown notification-list list-inline-item">
                     <div class="dropdown notification-list nav-pro-img">
                         <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                            <img src="" alt="user" class="rounded-circle">
+                            <img src="Public/Assets/images/Logo.png" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                             <!-- item-->
@@ -103,7 +103,7 @@
                             <a class="dropdown-item" href="#"><i class="mdi mdi-wallet"></i> Wallet</a>
                             <a class="dropdown-item d-block" href="#"><span class="badge badge-success float-right">11</span><i class="mdi mdi-settings"></i> Settings</a>
                             <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline"></i> Lock screen</a>
-                            <a class="dropdown-item text-danger" href="#"><i class="mdi mdi-power text-danger"></i> Logout</a>
+                            <a class="dropdown-item text-danger" href="<?= URL ?>?c=Logout&a=index"><i class="mdi mdi-power text-danger"></i>Cerrar sesión</a>
                         </div>
                     </div>
                 </li>
