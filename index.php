@@ -18,5 +18,5 @@ if (isset($_GET['c'])) {
     }
 } else {
     $controller = loadController(MAIN_CONTROLLER);
-    loadMethod(MAIN_CONTROLLER, 'index');
+    $controller->index();
 }
