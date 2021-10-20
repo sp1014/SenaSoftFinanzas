@@ -20,6 +20,7 @@
     <body>
 
         <!-- Begin page -->
+        
         <div class="accountbg">
       
         <div class="wrapper-page">
@@ -36,14 +37,15 @@
                             <div class="form-group">
                                 <div class="col-12">
                                         <label>Correo</label>
-                                    <input class="form-control" type="text" required="">
+                                    <input class="form-control" type="email" class="form-control" required
+                                     parsley-type="email">
                                 </div>
                             </div>
     
                             <div class="form-group">
                                 <div class="col-12">
                                         <label>Contraseña</label>
-                                    <input class="form-control" type="password" required="">
+                                    <input type="password" id="pass2" class="form-control" required>
                                 </div>
                             </div>
     
@@ -53,8 +55,7 @@
                                     <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Ingresar</button>
                                 </div>
                             </div>
-    
-                           
+
                         </form>
                     </div>
     
@@ -69,9 +70,16 @@
         <script src="../Assets/js/jquery.slimscroll.js"></script>
         <script src="../Assets/js/waves.min.js"></script>
 
+        <!-- Parsley js -->
+        <script src="../Assets/plugins/parsleyjs/parsley.min.js"></script>
         <!-- App js -->
         <script src="../Assets/js/app.js"></script>
         
+        <script>
+            $(document).ready(function() {
+                $('form').parsley();
+            });
+        </script>
     </body>
 
 </html>
