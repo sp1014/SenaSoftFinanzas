@@ -6,7 +6,6 @@ require_once("./Vector/header.php");
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
     <meta charset="utf-8" />
     <title>Finanzas</title>
     <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -14,14 +13,7 @@ require_once("./Vector/header.php");
     <link href="../Assets/css/icons.css" rel="stylesheet" type="text/css">
     <link href="../Assets/css/style.css" rel="stylesheet" type="text/css">
 
-=======
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $data['tittle'] ?></title>
->>>>>>> 46e5c7e477dcbd879dabc8cc695dc6205231584e
 </head>
-
 <body>
        
                
@@ -395,7 +387,6 @@ require_once("./Vector/header.php");
     </div>
    
 </body>
-<<<<<<< HEAD
 <?php
 require_once("./Vector/footer.php");
 ?>
@@ -414,7 +405,4 @@ require_once("./Vector/footer.php");
 
     <!-- App js -->
     <script src="../Assets/js/app.js"></script>
-=======
-
->>>>>>> 46e5c7e477dcbd879dabc8cc695dc6205231584e
 </html>
