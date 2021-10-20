@@ -4481,9 +4481,9 @@ input[type=button].btn-block, input[type=reset].btn-block, input[type=submit].bt
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
+    min-width: 20;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color:red;
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: .25rem
