@@ -365,7 +365,6 @@
             </div>
         </div>
     </div>
-<<<<<<< HEAD
     <?php
     require_once("./Vector/footer.php");
     ?>
@@ -375,19 +374,6 @@
     <script src="../Assets/js/metismenu.min.js" defer></script>
     <script src="../Assets/js/jquery.slimscroll.js" defer></script>
     <script src="../Assets/js/waves.min.js" defer></script>
-=======
-   
-</body>
-<?php
-require_once("./Vector/footer.php");
-?>
-<!-- jQuery  -->
-    <script src="../Assets/js/jquery.min.js"></script>
-    <script src="../Assets/js/bootstrap.bundle.min.js"></script>
-    <script src="../Assets/js/metismenu.min.js"></script>
-    <script src="../Assets/js/jquery.slimscroll.js"></script>
-    <script src="../Assets/js/waves.min.js"></script>
->>>>>>> d28be17d25803e21299dbf0640fa340839c893e3
 
     <!--Morris Chart-->
     <script src="../Assets/plugins/morris/morris.min.js" defer></script>
@@ -396,11 +382,7 @@ require_once("./Vector/footer.php");
     <script src="../Assets/pages/dashboard.init.js" defer></script>
 
     <!-- App js -->
-<<<<<<< HEAD
     <script src="../Assets/js/app.js" defer></script>
 </body>
 
-=======
-    <script src="../Assets/js/app.js"></script>
->>>>>>> d28be17d25803e21299dbf0640fa340839c893e3
 </html>

@@ -4,7 +4,6 @@ require_once('App/Helpers/Helpers.php');
 require_once('Config/Conection.php');
 require_once('Config/Config.php');
 require_once('App/Core/Routes.php');
-//redireccionar a la vista de Pagina de Inicio 
 
 if (isset($_GET['c'])) {
     $controller = loadController($_GET['c']);
