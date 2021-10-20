@@ -3,19 +3,16 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Finanzas</title>
-    <link href="../Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="../Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-    <link href="../Assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="../Assets/css/style.css" rel="stylesheet" type="text/css">
-<<<<<<< HEAD
-=======
-
->>>>>>> d28be17d25803e21299dbf0640fa340839c893e3
+    <title><?= $data['tittle'] ?></title>
+    <link href="Public/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <?php
-    require_once("./Vector/header.php");
+    require_once('Public/Views/vector/header.php');
     ?>
     <div class="row">
         <div class="col-sm-6 col-xl-3">
@@ -129,7 +126,7 @@
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
                                 <div class="float-left mb-0 mr-3">
-                                    <img src="../Assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
+                                    <img src="Public/Assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
                                 </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
@@ -145,7 +142,7 @@
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
                                 <div class="float-left mb-0 mr-3">
-                                    <img src="../Assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
+                                    <img src="Public/Assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
                                 </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
@@ -161,7 +158,7 @@
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
                                 <div class="float-left mb-0 mr-3">
-                                    <img src="../Assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
+                                    <img src="Public/Assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
                                 </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
@@ -177,7 +174,7 @@
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
                                 <div class="float-left mb-0 mr-3">
-                                    <img src="../Assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
+                                    <img src="Public/Assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
                                 </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
@@ -192,7 +189,7 @@
                         <a href="#" class="friends-suggestions-list">
                             <div class="position-relative">
                                 <div class="float-left mb-0 mr-3">
-                                    <img src="../Assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
+                                    <img src="Public/Assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
                                 </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
@@ -273,7 +270,7 @@
                                     <td>$9,420,000</td>
                                     <td>
                                         <div>
-                                            <img src="../Assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
+                                            <img src="Public/Assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
                                         </div>
                                     </td>
                                     <td>Houston, TX 77074</td>
@@ -291,7 +288,7 @@
                                     <td>$3,120,000</td>
                                     <td>
                                         <div>
-                                            <img src="../Assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
+                                            <img src="Public/Assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
                                         </div>
                                     </td>
                                     <td>Oakland, CA 94612</td>
@@ -309,7 +306,7 @@
                                     <td>$6,360,000</td>
                                     <td>
                                         <div>
-                                            <img src="../Assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
+                                            <img src="Public/Assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
                                         </div>
                                     </td>
                                     <td>Hebron, ME 04238</td>
@@ -327,7 +324,7 @@
                                     <td>$5,200,000</td>
                                     <td>
                                         <div>
-                                            <img src="../Assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
+                                            <img src="Public/Assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
                                         </div>
                                     </td>
                                     <td>Salinas, CA 93901</td>
@@ -345,7 +342,7 @@
                                     <td>$7,250,000</td>
                                     <td>
                                         <div>
-                                            <img src="../Assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
+                                            <img src="Public/Assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
                                         </div>
                                     </td>
                                     <td>Cincinnati, OH 45202</td>
@@ -366,23 +363,23 @@
         </div>
     </div>
     <?php
-    require_once("./Vector/footer.php");
+    require_once("Public/Views/Vector/footer.php");
     ?>
     <!-- jQuery -->
-    <script src="../Assets/js/jquery.min.js" defer></script>
-    <script src="../Assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="../Assets/js/metismenu.min.js" defer></script>
-    <script src="../Assets/js/jquery.slimscroll.js" defer></script>
-    <script src="../Assets/js/waves.min.js" defer></script>
+    <script src="Public/Assets/js/jquery.min.js" defer></script>
+    <script src="Public/Assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="Public/Assets/js/metismenu.min.js" defer></script>
+    <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
+    <script src="Public/Assets/js/waves.min.js" defer></script>
 
     <!--Morris Chart-->
-    <script src="../Assets/plugins/morris/morris.min.js" defer></script>
-    <script src="../Assets/plugins/raphael/raphael.min.js" defer></script>
+    <script src="Public/Assets/plugins/morris/morris.min.js" defer></script>
+    <script src="Public/Assets/plugins/raphael/raphael.min.js" defer></script>
 
-    <script src="../Assets/pages/dashboard.init.js" defer></script>
+    <script src="Public/Assets/pages/dashboard.init.js" defer></script>
 
     <!-- App js -->
-    <script src="../Assets/js/app.js" defer></script>
+    <script src="Public/Assets/js/app.js" defer></script>
 </body>
 
 </html>

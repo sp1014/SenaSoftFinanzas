@@ -11,7 +11,7 @@ class IndexController
      */
     public function index()
     {
-        $data['tittle'] = 'Lista de roles';
+        $data['tittle'] = 'Menú | '. NAME;
         require_once('Public/Views/index.php');
     }
 

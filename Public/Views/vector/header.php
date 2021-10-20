@@ -6,10 +6,10 @@
         <div class="topbar-left">
             <a href="index.html" class="logo">
                 <span class="logo-light">
-                    <img src="../Assets/images/Logo.png" width="210" height="40px">
+                    <img src="Public/Assets/images/Logo.png" width="210" height="40px">
                 </span>
                 <span class="logo-sm">
-                    <img src="../Assets/images/Icono.png" width="50px">
+                    <img src="Public/Assets/images/Icono.png" width="50px">
                 </span>
             </a>
         </div>
@@ -19,14 +19,14 @@
                 <!-- language-->
                 <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
                     <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
-                        <img src="../../Assets/images/flags/us_flag.jpg" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
+                        <img src="Public/Assets/images/flags/us_flag.jpg" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated language-switch">
-                        <a class="dropdown-item" href="#"><img src="../../Assets/images/flags/french_flag.jpg" alt="" height="16" /><span> French </span></a>
-                        <a class="dropdown-item" href="#"><img src="../../Assets/images/flags/spain_flag.jpg" alt="" height="16" /><span> Spanish </span></a>
-                        <a class="dropdown-item" href="#"><img src="../../Assets/images/flags/russia_flag.jpg" alt="" height="16" /><span> Russian </span></a>
-                        <a class="dropdown-item" href="#"><img src="../../Assets/images/flags/germany_flag.jpg" alt="" height="16" /><span> German </span></a>
-                        <a class="dropdown-item" href="#"><img src="../../Assets/images/flags/italy_flag.jpg" alt="" height="16" /><span> Italian </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/french_flag.jpg" alt="" height="16" /><span> French </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/spain_flag.jpg" alt="" height="16" /><span> Spanish </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/russia_flag.jpg" alt="" height="16" /><span> Russian </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/germany_flag.jpg" alt="" height="16" /><span> German </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/italy_flag.jpg" alt="" height="16" /><span> Italian </span></a>
                     </div>
                 </li>
 

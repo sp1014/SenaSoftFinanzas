@@ -6,7 +6,6 @@
 function loadController($controller)
 {
     $nameController = ucwords(strtolower($controller)) . "Controller";
-    echo $nameController;
     $nameFile = "App/Controllers/$nameController.php";
 
     if (!is_file($nameFile)) {
