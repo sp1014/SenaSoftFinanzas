@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Cliente Interno</title>
+    <title>Categoria</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Themesdesign" name="author" />
 
@@ -33,7 +33,7 @@
                      
                 <!-- end page-title -->
                 <div class="well well-sm text-right">
-                    <a class="btn btn-primary" href="?c=admin&a=Nuevo">Nuevo Usuario</a>
+                    <a class="btn btn-primary" href="?c=categoria&a=Nuevo">Nueva Categoria</a>
                 </div>
                 <span>-</span>
                 <div class="row">
@@ -41,17 +41,18 @@
                         <div class="card m-b-30">
                             <div class="card-body">
 
-                                <h4 class="mt-0 header-title">Usuarios registrados</h4>
+                                <h4 class="mt-0 header-title">Categorias registradas</h4>
                                 <p class="sub-title"></code>
                                 </p>
 
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                         <tr>
-                                            <th>Categoria</th>
-                                            <th>Nombre</th>
-                                            <th>Docuemento PDF</th>
+                                            <th>Id</th>
+                                            <th>Nombre de la Categoria</th>
                                             
+                                            <th>Acciones</th>
+                                            <th>Acciones</th>
                                         </tr>
                                     </thead>
 
@@ -60,12 +61,18 @@
 
                                         <?php foreach ($this->model->Listar() as $r) : ?>
                                             <tr>
-                                                <td><?php echo $r->categoria; ?></td>
-                                                <td><?php echo $r->datospersonales; ?></td>
+                                                <td><?php echo $r->id; ?></td>
+                                                <td><?php echo $r->nombre; ?></td>
+                                              
+                                                <td>
 
-                                                <td><a href="/../../SenaSoftFinanzas/repository/<?php echo $r->categoria ?>/<?php echo $r->clienteexterno; ?>">PDF</a></td>
-                                            
-                                               
+                                                    <a href="?c=categoria&a=Crud&id=<?php echo $r->id; ?>" class="btn btn-primary">Editar</a>
+                                                </td>
+                                                <td>
+
+                                                    <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=categoria&a=Eliminar&id=<?php echo $r->id; ?>" class="btn btn-primary">Eliminar</a>
+                                                </td>
+
                                             </tr>
 
                                         <?php endforeach; ?>
