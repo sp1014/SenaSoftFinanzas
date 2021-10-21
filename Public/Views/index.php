@@ -1,385 +1,259 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <title><?= $data['tittle'] ?></title>
-    <link href="Public/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="Public/Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
-    <link href="Public/Assets/css/icons.css" rel="stylesheet" type="text/css">
-    <link href="Public/Assets/css/style.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Index</title>
+  
+
+  <!-- Favicons -->
+  <link href="Public/Assets/images/Icono.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  
+
+  <!-- Template Main CSS File -->
+  <link href="Public/Assets/css/index.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab - v4.6.0
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
-    <?php
-    require_once('Public/Views/vector/header.php');
-    ?>
-    <div class="row">
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-heading p-4">
-                    <div class="mini-stat-icon float-right">
-                        <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-16">Active Sessions</h5>
-                    </div>
-                    <h3 class="mt-4">43,225</h3>
-                    <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-heading p-4">
-                    <div class="mini-stat-icon float-right">
-                        <i class="mdi mdi-briefcase-check bg-success text-white"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-16">Total Revenue</h5>
-                    </div>
-                    <h3 class="mt-4">$73,265</h3>
-                    <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">88%</span></p>
-                </div>
-            </div>
-        </div>
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="mailto:contact@example.com">Financialfast@gmail.com</a>
+        <i class="bi bi-phone"></i> 3916728356
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+      </div>
+    </div>
+  </div>
 
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-heading p-4">
-                    <div class="mini-stat-icon float-right">
-                        <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-16">Average Price</h5>
-                    </div>
-                    <h3 class="mt-4">447</h3>
-                    <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p>
-                </div>
-            </div>
-        </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
 
-        <div class="col-sm-6 col-xl-3">
-            <div class="card">
-                <div class="card-heading p-4">
-                    <div class="mini-stat-icon float-right">
-                        <i class="mdi mdi-buffer bg-danger text-white"></i>
-                    </div>
-                    <div>
-                        <h5 class="font-16">Add to Card</h5>
-                    </div>
-                    <h3 class="mt-4">86%</h3>
-                    <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p>
-                </div>
-            </div>
-        </div>
+      <h1 class="logo me-auto"><img src="Public/Assets/images/Logo.png" width="260px" height="200px"></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="Public/Assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about">Ventajas</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contáctanos</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="<?=URL?>?c=login&a=index" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Ingresar</a>
 
     </div>
+  </header><!-- End Header -->
 
-    <div class="row">
-        <div class="col-xl-8">
-            <div class="card m-b-30">
-                <div class="card-body">
-
-                    <h4 class="mt-0 header-title mb-4">Area Chart</h4>
-
-                    <div id="morris-area-example" class="morris-charts morris-chart-height"></div>
-
-                </div>
-            </div>
-        </div>
-        <!-- end col -->
-
-        <div class="col-xl-4">
-            <div class="card m-b-30">
-                <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Donut Chart</h4>
-
-                    <div id="morris-donut-example" class="morris-charts morris-chart-height"></div>
-
-                </div>
-            </div>
-        </div>
-        <!-- end col -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <h1>¡Bienvenido a Financialfast!</h1>
+      <a href="#about" class="btn-get-started scrollto">Empecemos</a>
     </div>
-    <!-- end row -->
+  </section><!-- End Hero -->
 
-    <div class="row">
-        <div class="col-xl-4">
-            <div class="card m-b-30">
-                <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Friends Suggestions</h4>
-                    <div class="friends-suggestions">
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/users/user-2.jpg" alt="" class="rounded-circle thumb-md">
-                                </div>
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
+  <main id="main">
 
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Ralph Ramirez</h5>
-                                    <p class="text-muted">3 Friend suggest</p>
-                                </div>
-                            </div>
-                        </a>
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
 
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
-                                </div>
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Patrick Beeler</h5>
-                                    <p class="text-muted">17 Friend suggest</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
-                                </div>
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Victor Zamora</h5>
-                                    <p class="text-muted">12 Friend suggest</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
-                                </div>
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Bryan Lacy</h5>
-                                    <p class="text-muted">18 Friend suggest</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/users/user-6.jpg" alt="" class="rounded-circle thumb-md">
-                                </div>
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">James Sorrells</h5>
-                                    <p class="text-muted mb-1">6 Friend suggest</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="content">
+              <h3>Financialfast</h3>
+              <p>
+              FinancialFast es un sistema de información que le permitirá al usuario ingresar su documento y a partir de este evidenciara a que tipo de documentos establecidos por el sistema el archivo pertenece.
+              </p>
+             
             </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="far fa-user"></i>
+                    <h4>Autenticación</h4>
+                    <p>El sistema reconocera su rol al ingresar al sistema y apartir de esto apareceran diferentes módulos.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="far fa-folder"></i>
+                    <h4>Reconocimiento de contenido</h4>
+                    <p>El sistema reconocerá la información del PDF y lo asociará al tipo de contenido al cual pertenece y dispondrá a gurdarlo en un repositorio.</p>
+                  </div>
+                </div>
+                <div class="col-xl-4 d-flex align-items-stretch">
+                  <div class="icon-box mt-4 mt-xl-0">
+                    <i class="far fa-file-pdf"></i>
+                    <h4>Subir archivos PDF</h4>
+                    <p>En el sistema se podra cargar archipos PDF y así se realizara el proceso de verificación para conocer que el tipo de contenido al cual pertenece,si llega a ser otro tipo de archivo no lo dejara cargar.</p>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
         </div>
 
-        <div class="col-xl-4">
-            <div class="card m-b-30">
-                <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Sales Analytics</h4>
-                    <div id="morris-line-example" class="morris-chart" style="height: 360px"></div>
-                </div>
+      </div>
+    </section><!-- End Why Us Section -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container-fluid">
+
+        <div class="row">
+          <div class="col-xl-5 col-lg-6 d-flex justify-content-center align-items-stretch position-relative">
+            <img src="https://image.freepik.com/foto-gratis/hombre-negocios-senalando-grafico-barra_1098-2665.jpg">
+          </div>
+
+          <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+            <h3>Ventajas</h3>
+            <p> 
+              El sistema presenta gran variedad de ventajas y algunas de estas son las siguientes:
+            </p>
+
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-desktop"></i></div>
+              <h4 class="title"><a href="">Facilidad de usar el sitema</a></h4>
+              <p class="description">El sistema proporcionara un ambiente web agradable para el susuario mediante iconos, <br>
+                colores adecuados,informaci{on adecuada , lo cual permitirá que el usuario navegue con facilidad.</p>
             </div>
+
+            <div class="icon-box">
+              <div class="icon"><i class="far fa-file-alt"></i></div>
+              <h4 class="title"><a href="">Consultas de archivos PDF por categorias</a></h4>
+              <p class="description">Las consultas que se evidenciaras seran respondiads por el sistema de uuna forma adecuadas,<br> eficiente y rápida.</p>
+            </div>
+
+          </div>
         </div>
 
-        <div class="col-xl-4">
-            <div class="card m-b-30">
-                <div class="card-body">
+      </div>
+    </section><!-- End About Section -->
 
-                    <h4 class="mt-0 header-title mb-4">Recent Activity</h4>
-                    <ol class="activity-feed mb-0">
-                        <li class="feed-item">
-                            <div class="feed-item-list">
-                                <p class="text-muted mb-1">Now</p>
-                                <p class="font-15 mt-0 mb-0">Andrei Coman magna sed porta finibus, risus posted a new article: <b class="text-primary">Forget UX Rowland</b></p>
-                            </div>
-                        </li>
-                        <li class="feed-item">
-                            <p class="text-muted mb-1">Yesterday</p>
-                            <p class="font-15 mt-0 mb-0">Andrei Coman posted a new article: <b class="text-primary">Designer Alex</b></p>
-                        </li>
-                        <li class="feed-item">
-                            <p class="text-muted mb-1">2:30PM</p>
-                            <p class="font-15 mt-0 mb-0">Zack Wetass, sed porta finibus, risus Chris Wallace Commented <b class="text-primary"> Developer Moreno</b></p>
-                        </li>
-                        <li class="feed-item pb-1">
-                            <p class="text-muted mb-1">12:48 PM</p>
-                            <p class="font-15 mt-0 mb-2">Zack Wetass, Chris Wallace Commented <b class="text-primary">UX Murphy</b></p>
-                        </li>
-                    </ol>
-                </div>
-            </div>
+    
+
+    
+    
+   
+    
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contáctanos</h2>
         </div>
+      </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8611154097953!2d-74.06993678474936!3d4.618855093646694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f999c7a53228b%3A0x3a01e1943a22dcfa!2sCajero%20Autom%C3%A1tico%20Banco%20Scotiabank!5e0!3m2!1ses!2sco!4v1634768293598!5m2!1ses!2sco" width="1900" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <div class="container">
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Ubicación:</h4>
+                <p>Ak. 7 #Nº 32-84, Bogotá
+                </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Correo:</h4>
+                <p>Financialfast@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Telefono:</h4>
+                <p>3916728356</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Correo" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+             
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>FinancialFast2021</span></strong>. Todos los derechos son reservados
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      </div>
     </div>
+  </footer><!-- End Footer -->
 
-    <!-- START ROW -->
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="card m-b-30">
-                <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Active Deals</h4>
-                    <div class="table-responsive">
-                        <table class="table table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Amount</th>
-                                    <th scope="col">Contact</th>
-                                    <th scope="col">Location</th>
-                                    <th scope="col" colspan="2">Date</th>
-
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Philip Smead</td>
-                                    <td><span class="badge badge-success">Delivered</span></td>
-                                    <td>$9,420,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/users/user-2.jpg" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
-                                        </div>
-                                    </td>
-                                    <td>Houston, TX 77074</td>
-                                    <td>15/1/2018</td>
-
-                                    <td>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Brent Shipley</td>
-                                    <td><span class="badge badge-warning">Pending</span></td>
-                                    <td>$3,120,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/users/user-3.jpg" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
-                                        </div>
-                                    </td>
-                                    <td>Oakland, CA 94612</td>
-                                    <td>16/1/2019</td>
-
-                                    <td>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Robert Sitton</td>
-                                    <td><span class="badge badge-success">Delivered</span></td>
-                                    <td>$6,360,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/users/user-4.jpg" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
-                                        </div>
-                                    </td>
-                                    <td>Hebron, ME 04238</td>
-                                    <td>17/1/2019</td>
-
-                                    <td>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>Alberto Jackson</td>
-                                    <td><span class="badge badge-danger">Cancel</span></td>
-                                    <td>$5,200,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/users/user-5.jpg" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
-                                        </div>
-                                    </td>
-                                    <td>Salinas, CA 93901</td>
-                                    <td>18/1/2019</td>
-
-                                    <td>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>David Sanchez</td>
-                                    <td><span class="badge badge-success">Delivered</span></td>
-                                    <td>$7,250,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/users/user-6.jpg" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
-                                        </div>
-                                    </td>
-                                    <td>Cincinnati, OH 45202</td>
-                                    <td>19/1/2019</td>
-
-                                    <td>
-                                        <div>
-                                            <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php
-    require_once("Public/Views/Vector/footer.php");
-    ?>
-    <!-- jQuery -->
-    <script src="Public/Assets/js/jquery.min.js" defer></script>
-    <script src="Public/Assets/js/bootstrap.bundle.min.js" defer></script>
-    <script src="Public/Assets/js/metismenu.min.js" defer></script>
-    <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
-    <script src="Public/Assets/js/waves.min.js" defer></script>
-
-    <!--Morris Chart-->
-    <script src="Public/Assets/plugins/morris/morris.min.js" defer></script>
-    <script src="Public/Assets/plugins/raphael/raphael.min.js" defer></script>
-
-    <script src="Public/Assets/pages/dashboard.init.js" defer></script>
-
-    <!-- App js -->
-    <script src="Public/Assets/js/app.js" defer></script>
+ 
 </body>
-
 </html>
