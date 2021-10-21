@@ -84,10 +84,21 @@
     </div>
 </form>
 
-<script>
-    $(document).ready(function(){
-        $("#frm-admin").submit(function(){
-            return $(this).validate();
+ <!-- jQuery  -->
+ <script src="Public/Assets/js/jquery.min.js"></script>
+    <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="Public/Assets/js/metismenu.min.js"></script>
+    <script src="Public/Assets/js/jquery.slimscroll.js"></script>
+    <script src="Public/Assets/js/waves.min.js"></script>
+
+    <!-- Parsley js -->
+    <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
+    <!-- App js -->
+    <script src="Public/Assets/js/app.js" defer></script>
+    <script src="Public/Assets/js/functions/clienteexterno.js" defer></script>
+
+    <script defer>
+        $(document).ready(function() {
+            $('form').parsley();
         });
-    })
-</script>
+    </script>
