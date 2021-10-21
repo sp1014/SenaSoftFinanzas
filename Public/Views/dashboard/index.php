@@ -99,9 +99,7 @@
                     <div class="friends-suggestions">
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/icono.png" alt="" class="rounded-circle thumb-md">
-                                </div>
+                                
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
@@ -115,9 +113,6 @@
 
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/icono.png" alt="" class="rounded-circle thumb-md">
-                                </div>
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
@@ -131,9 +126,7 @@
 
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/icono.png" alt="" class="rounded-circle thumb-md">
-                                </div>
+                               
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
@@ -147,9 +140,7 @@
 
                         <a href="#" class="friends-suggestions-list">
                             <div class="border-bottom position-relative">
-                                <div class="float-left mb-0 mr-3">
-                                    <img src="Public/Assets/images/icono.png" alt="" class="rounded-circle thumb-md">
-                                </div>
+                                
                                 <div class="suggestion-icon float-right mt-2 pt-1">
                                     <i class="mdi mdi-plus"></i>
                                 </div>
@@ -168,25 +159,25 @@
             <div class="card m-b-30">
                 <div class="card-body">
 
-                    <h4 class="mt-0 header-title mb-4">Recent Activity</h4>
+                    <h4 class="mt-0 header-title mb-4">Funciones principales</h4>
                     <ol class="activity-feed mb-0">
                         <li class="feed-item">
                             <div class="feed-item-list">
-                                <p class="text-muted mb-1">Now</p>
-                                <p class="font-15 mt-0 mb-0">Andrei Coman magna sed porta finibus, risus posted a new article: <b class="text-primary">Forget UX Rowland</b></p>
+                                <p class="text-muted mb-1">Sistema</p>
+                                <p class="font-15 mt-0 mb-0">El sistema permitira al rol administrador crear un usuario y su respectivo rol.</p>
                             </div>
                         </li>
                         <li class="feed-item">
-                            <p class="text-muted mb-1">Yesterday</p>
-                            <p class="font-15 mt-0 mb-0">Andrei Coman posted a new article: <b class="text-primary">Designer Alex</b></p>
+                            <p class="text-muted mb-1">Rapidez</p>
+                            <p class="font-15 mt-0 mb-0">Los PDF se mostraran en menos de 5 segundos y con la informacion adecuada.
                         </li>
                         <li class="feed-item">
-                            <p class="text-muted mb-1">2:30PM</p>
-                            <p class="font-15 mt-0 mb-0">Zack Wetass, sed porta finibus, risus Chris Wallace Commented <b class="text-primary"> Developer Moreno</b></p>
+                            <p class="text-muted mb-1">Categoria</p>
+                            <p class="font-15 mt-0 mb-0">Cada PDF va a ser filtrado por su categoria y su consulta sera rápida.</p>
                         </li>
                         <li class="feed-item pb-1">
-                            <p class="text-muted mb-1">12:48 PM</p>
-                            <p class="font-15 mt-0 mb-2">Zack Wetass, Chris Wallace Commented <b class="text-primary">UX Murphy</b></p>
+                            <p class="text-muted mb-1">Almacena</p>
+                            <p class="font-15 mt-0 mb-2">Almacena la infotmacion de una manera organizada dependiendo su categoria</p>
                         </li>
                     </ol>
                 </div>
@@ -199,7 +190,7 @@
         <div class="col-xl-12">
             <div class="card m-b-30">
                 <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Active Deals</h4>
+                    <h4 class="mt-0 header-title mb-4">Nuestras sucursales</h4>
                     <div class="table-responsive">
                         <table class="table table-hover">
                             <thead>
@@ -218,11 +209,7 @@
                                     <td>Philip Smead</td>
                                     <td><span class="badge badge-success">Delivered</span></td>
                                     <td>$9,420,000</td>
-                                    <td>
-                                        <div>
-                                            <img src="Public/Assets/images/icono.png" alt="" class="thumb-md rounded-circle mr-2"> Philip Smead
-                                        </div>
-                                    </td>
+                                  <td> Philip Smead</td>
                                     <td>Houston, TX 77074</td>
                                     <td>15/1/2018</td>
 
@@ -238,7 +225,7 @@
                                     <td>$3,120,000</td>
                                     <td>
                                         <div>
-                                            <img src="Public/Assets/images/icono.png" alt="" class="thumb-md rounded-circle mr-2"> Brent Shipley
+                                            Brent Shipley
                                         </div>
                                     </td>
                                     <td>Oakland, CA 94612</td>
@@ -256,7 +243,7 @@
                                     <td>$6,360,000</td>
                                     <td>
                                         <div>
-                                            <img src="Public/Assets/images/icono.png" alt="" class="thumb-md rounded-circle mr-2"> Robert Sitton
+                                             Robert Sitton
                                         </div>
                                     </td>
                                     <td>Hebron, ME 04238</td>
@@ -274,7 +261,7 @@
                                     <td>$5,200,000</td>
                                     <td>
                                         <div>
-                                            <img src="Public/Assets/images/icono.png" alt="" class="thumb-md rounded-circle mr-2"> Alberto Jackson
+                                             Alberto Jackson
                                         </div>
                                     </td>
                                     <td>Salinas, CA 93901</td>
@@ -292,7 +279,7 @@
                                     <td>$7,250,000</td>
                                     <td>
                                         <div>
-                                            <img src="Public/Assets/images/icono.png" alt="" class="thumb-md rounded-circle mr-2"> David Sanchez
+                                           David Sanchez
                                         </div>
                                     </td>
                                     <td>Cincinnati, OH 45202</td>

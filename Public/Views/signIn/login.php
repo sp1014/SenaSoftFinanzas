@@ -29,22 +29,18 @@
                    
                     <div class="form-group">
                    <label> Seleccione la Voz:</label> 
-                   <select  id='voiceList' class="form-control">
+                   <select  id='voiceList' class="form-control"> 
                     </div>
 
                     </select>     
                         <div class="form-group">
-                            <div class="col-12">
                                 <label>Correo</label>
                                 <input class="form-control" type="email" id="txtEmail" name="txtEmail" placeholder="ejemplo@micorreo" required parsley-type="email">
-                            </div>
                         </div>
 
                         <div class="form-group">
-                            <div class="col-12">
                                 <label>Contraseña</label>
                                 <input class="form-control" type="password" id="txtPass" name="txtPass" placeholder="Contraseña" required>
-                            </div>
                         </div>
 
                         <div class="form-group text-center m-t-20">
