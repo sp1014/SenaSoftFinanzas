@@ -1,16 +1,17 @@
 <?php
-
+require_once('App/Models/Admin.php');
 /**
  * Controla el inicio de sesión.
  */
 class AdminController
 {
+    private $model;
     /**
      * Método constructor que carga el archivo del modelo que va a estar asociado. 
      */
-    public function __construct()
-    {
-        require_once('App/Models/Admin.php');
+    public function __CONSTRUCT()
+    { $this->model = new admin();
+        
     }
     /**
      * Carga la vista de index
@@ -20,6 +21,7 @@ class AdminController
         $data['tittle'] = 'Usuarios | Finanzal Fast';
         require_once('Public/Views/admin/admin.php');
     }
+
 
     public function Crud(){
         $pvd = new admin();
