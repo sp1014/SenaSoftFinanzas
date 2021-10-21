@@ -14,7 +14,7 @@ class ClienteExternoController
      */
     public function index()
     {
-        $data['tittle'] = 'Cargar documentos | Finanzal Fast';
+        $data['tittle'] = 'Cargar documentos | Finacialfast';
         require_once('Public/Views/clienteexterno/clienteexterno.php');
     }
 
