@@ -63,4 +63,26 @@ class ClienteExternoController
         echo json_encode($arrResp, JSON_UNESCAPED_UNICODE);
         die();
     }
+
+    public function parser()
+    {
+        $arrDir =  getDirectory('repository');
+        print_r($arrDir);
+        if (!empty($arrDir)) {
+            foreach ($arrDir as $file) {
+                $text = parserPdf($file);
+                if (!empty($text)) {
+                    echo '<br /><br />' . $text . '<br/><br />';
+                } else {
+                    $textImg = parserImage($file);
+                    echo '<br /><br />' . $textImg . '<br/><br />';
+                }
+            }
+        }
+    }
+
+    public function parserImage()
+    {
+        $image = parserImage('documento_identidad');
+    }
 }
