@@ -21,6 +21,23 @@
     ?>
 
     
+<div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h4 class="page-title"></h4>
+                                </div>
+                                <div class="col-sm-6">
+                                <ol class="breadcrumb">
+                                <li><a href="?c=admin">Usuarios</a></li>
+                                <li class="active"><?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?></li>
+                                </ol>
+                                </div>
+                            </div> <!-- end row -->
+                        </div>
 <div class="container">
   <div class="row">
     <div class="col-sm">
@@ -28,10 +45,7 @@
     <?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?>
 </h1>
 
-<ol class="breadcrumb">
-  <li><a href="?c=admin">Usuaros</a></li>
-  <li class="active"><?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?></li>
-</ol>
+
 
 <form id="frm-proveedor" action="?c=admin&a=Editar" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $pvd->id; ?>" />
@@ -78,12 +92,10 @@
     <div class="form-group">
         <label>Rol</label>
     
-        <select name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>">
+        <select name="tipo_rol"   value="<?php echo $pvd->tipo_rol; ?>">
             <option value="Administrador">Administrador</option>
             <option value="Cliente Interno">Cliente Interno</option>
             <option value="Cliente Externo">Cliente Externo</option>
-           
-            
             
         </select>
     </div>

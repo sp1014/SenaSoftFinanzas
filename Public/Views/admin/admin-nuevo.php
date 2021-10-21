@@ -1,104 +1,140 @@
-<h1 class="page-header">
-    Nuevo Registro
-</h1>
+<body>
+    <?php
+    require_once('Public/Views/vector/header.php');
+    ?>
+    <link rel="shortcut icon" href="Public/Assets/images/icono.png">
+    <link href="Public/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/style.css" rel="stylesheet" type="text/css">
 
-<ol class="breadcrumb">
-  <li><a href="?c=admin">Usuario</a></li>
-  <li class="active">Nuevo Registro</li>
-</ol>
+    <!-- DataTables -->
+    <link href="Public/Assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="Public/Assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
-<form id="frm-admin" action="?c=admin&a=Guardar" method="post" enctype="multipart/form-data">
-
-
+    <!-- Responsive datatable examples -->
+    <link href="Public/Assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
 
 
-    <div class="form-group">
-        <label>Nombre</label>
-        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
-    </div>
 
-    <div class="form-group">
-        <label>Tipo Documento</label>
-       <!-- <input type="text" name="id_tipodocumento" value="" class="form-control"  data-validacion-tipo="requerido|min:100" />-->
 
-        <select name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>">
-            <option value="1">CC</option>
-            <option value="2">TI</option>
-            <option value="3">CE</option>
-            <option value="4">RC</option>
-            <option value="5">PA</option>
-            
-            
-        </select>
-    </div>
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <h4 class="page-title">Nuevo registro</h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
+                            </ol>
+                        </div>
+                    </div> <!-- end row -->
+                </div>
+                <!-- end page-title -->
 
-    <div class="form-group">
-        <label>Numero Docuemnto</label>
-        <input type="text" name="numero_documento" value="<?php echo $pvd->numero_documento; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
-    </div>
+                <div class="row  d-flex justify-content-center">
+                    <div class="col-lg-5">
+                        <div class="card m-b-30">
+                            <div class="card-body">
 
-    <div class="form-group">
-        <label>Telefono</label>
-        <input type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
-    </div>
+                                <form id="frm-admin" action="?c=admin&a=Guardar" method="post" enctype="multipart/form-data">
 
-    <div class="form-group">
-        <label>Correo</label>
-        <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
-    </div>
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" />
+                                    </div>
 
-    <div class="form-group">
-        <label>Clave</label>
-        <input type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
-    </div>
+                                    <div class="form-group">
+                                        <label>Tipo Documento</label>
+                                        <!-- <input type="text" name="id_tipodocumento" value="" class="form-control"  data-validacion-tipo="requerido|min:100" />-->
 
-    <div class="form-group">
-        <label>Rol</label>
-        <select name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>">
-            <option value="Administrador">Administrador</option>
-            <option value="Cliente Interno">Cliente Interno</option>
-            <option value="Cliente Externo">Cliente Externo</option>
-           
-            
-            
-        </select>
-    
-    
-    </div>
+                                        <select name="id_tipodocumento" class="form-control" value="<?php echo $pvd->id_tipodocumento; ?>">
+                                            <option value="1">CC</option>
+                                            <option value="2">TI</option>
+                                            <option value="3">CE</option>
+                                            <option value="4">RC</option>
+                                            <option value="5">PA</option>
 
-    <div class="form-group">
-        <label>Estado</label>
-        <select name="estado" value="<?php echo $pvd->estado; ?>">
-            <option value="1">Activo</option>
-            <option value="0">Inactivo</option>
-        
-            
-        </select>
-    
-    </div>
 
-    <hr />
+                                        </select>
+                                    </div>
 
-    <div class="text-right">
-        <button class="btn btn-success">Guardar</button>
-    </div>
-</form>
+                                    <div class="form-group">
+                                        <label>Numero Docuemnto</label>
+                                        <input type="text" name="numero_documento" value="<?php echo $pvd->numero_documento; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                    </div>
 
- <!-- jQuery  -->
- <script src="Public/Assets/js/jquery.min.js"></script>
-    <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
-    <script src="Public/Assets/js/metismenu.min.js"></script>
-    <script src="Public/Assets/js/jquery.slimscroll.js"></script>
-    <script src="Public/Assets/js/waves.min.js"></script>
+                                    <div class="form-group">
+                                        <label>Telefono</label>
+                                        <input type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                    </div>
 
-    <!-- Parsley js -->
-    <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
-    <!-- App js -->
-    <script src="Public/Assets/js/app.js" defer></script>
-    <script src="Public/Assets/js/functions/clienteexterno.js" defer></script>
+                                    <div class="form-group">
+                                        <label>Correo</label>
+                                        <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                    </div>
 
-    <script defer>
-        $(document).ready(function() {
-            $('form').parsley();
-        });
-    </script>
+                                    <div class="form-group">
+                                        <label>Clave</label>
+                                        <input type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Rol</label>
+                                        <select class="form-select form-control" name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>">
+                                            <option value="Administrador">Administrador</option>
+                                            <option value="Cliente Interno">Cliente Interno</option>
+                                            <option value="Cliente Externo">Cliente Externo</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Estado</label>
+                                        <select class="form-select form-control" name="estado" value="<?php echo $pvd->estado; ?>">
+                                            <option value="1">Activo</option>
+                                            <option value="0">Inactivo</option>
+                                        </select>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <div>
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                Enviar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+
+                    <?php
+                    require_once('Public/Views/vector/footer.php');
+                    require_once('Public/Views/components/scripts.php');
+                    ?>
+
+
+                    <!-- jQuery  -->
+                    <script src="Public/Assets/js/jquery.min.js"></script>
+                    <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
+                    <script src="Public/Assets/js/metismenu.min.js"></script>
+                    <script src="Public/Assets/js/jquery.slimscroll.js"></script>
+                    <script src="Public/Assets/js/waves.min.js"></script>
+
+                    <!-- Parsley js -->
+                    <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
+                    <!-- App js -->
+                    <script src="Public/Assets/js/app.js" defer></script>
+
+                    <script defer>
+                        $(document).ready(function() {
+                            $('form').parsley();
+                        });
+                    </script>
+</body>
