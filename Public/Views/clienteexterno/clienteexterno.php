@@ -21,64 +21,63 @@
     ?>
 
     <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container-fluid">
-                        <div class="page-title-box">
-                            <div class="row align-items-center">
-                                <div class="col-sm-6">
-                                    <h4 class="page-title"></h4>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ol class="breadcrumb float-right">
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
-                                    </ol>
-                                </div>
-                            </div> <!-- end row -->
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <h4 class="page-title"></h4>
                         </div>
-                        <!-- end page-title -->
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
+                            </ol>
+                        </div>
+                    </div> <!-- end row -->
+                </div>
+                <!-- end page-title -->
 
-                        <div class="row  d-flex justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="card m-b-30">
-                                    <div class="card-body">
-        
-                                    <div class="col-sm-9 ">
+                <div class="row  d-flex justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+
+                                <div class="col-sm-9 ">
                                     <h4 class="page-title">Registrar Documento</h4>
-                                     </div>
-                                     <span>-</span>
-                                        <form  enctype="multipart/form-data" id="form-clienteex">
-                                            <div class="form-group">
-                                                <label for="txtCategoria">Categoria</label>
-                                                <select class="form-control" id="txtCategoria" name="txtCategoria" required>
-                                                 </select>
-                                            </div>
-        
-                                           
-                                            <div class="form-group">
-                                            <label for="txtFile">Documento</label>
-                                                <div>
-                                                    <input class="form-control-file" type="file" id="txtFile" name="txtFile" accept="application/pdf" required>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="form-group">
-                                                <div>
-                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
-                                                        Enviar
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-        
-                                    </div>
                                 </div>
-                            </div> <!-- end col -->
+                                <span>-</span>
+                                <form enctype="multipart/form-data" id="form-clienteex">
+                                    <div class="form-group">
+                                        <label for="txtCategoria">Categoria</label>
+                                        <select class="form-control" id="txtCategoria" name="txtCategoria" required>
+                                        </select>
+                                    </div>
 
 
+                                    <div class="form-group">
+                                        <label for="txtFile">Documento</label>
+                                        <div>
+                                            <input class="form-control-file" type="file" id="txtFile" name="txtFile" accept="application/pdf" required>
+                                        </div>
+                                    </div>
 
-                            
+                                    <div class="form-group">
+                                        <div>
+                                            <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                Enviar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div> <!-- end col -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- END wrapper -->
     <?php
