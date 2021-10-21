@@ -70,17 +70,15 @@ class ClienteExternoController
         print_r($arrDir);
         if (!empty($arrDir)) {
             foreach ($arrDir as $file) {
-                $text = parserPdf($file);
+                $text = strtolower(parserPdf($file));
                 if (!empty($text)) {
                     $arrText = explode(' ', $text);
                     $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula'];
-                    $keyWordFactura = ['factura', 'número de factura', 'Factura'];
+                    $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
                     $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
 
                     foreach ($arrText as $text) {
-                        $text = strtolower($text);
                         foreach ($keyWordTipoDocumento as $tipoDoc) {
-                            $tipoDoc = strtolower($tipoDoc);
                             if ($text == $tipoDoc) {
                                 echo "Encontro alguna concordancia con: " . $tipoDoc;
                                 $r = true;
@@ -104,11 +102,7 @@ class ClienteExternoController
                     }
                     if ($r == false) {
                         foreach ($arrText as $text) {
-                            $text = strtolower($text);
-                            echo $text;
-                            exit();
                             foreach ($keyWordFactura as $factura) {
-                                $factura = strtolower($factura);
                                 if ($text == $factura) {
                                     echo "Encontro alguna concordancia con: " . $factura;
                                     $r = true;
@@ -133,9 +127,7 @@ class ClienteExternoController
                     }
                     if ($r == false) {
                         foreach ($arrText as $text) {
-                            $text = strtolower($text);
                             foreach ($keyWordCuentaCobro as $cuentaC) {
-                                $cuentaC = strtolower($cuentaC);
                                 if ($text == $cuentaC) {
                                     echo "Encontro alguna concordancia con: " . $cuentaC;
                                     $r = true;
