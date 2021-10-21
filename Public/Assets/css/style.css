@@ -47,6 +47,7 @@ TABLES OF CSS
 /* ==============
   General
 ===================*/
+footer
 body {
   background-repeat: repeat;
   background: #f9f9f9;
@@ -1258,8 +1259,8 @@ accountbg
   text-align: center !important;
   padding: 19px 30px 20px;
   position: absolute;
-  background-color: #0058ac;
-  color:#FFFFFF;
+  background-color: #e9ecef;
+  color:#000000;
   right: 0;
   left: 240px;
   font-family: "Poppins", sans-serif;
