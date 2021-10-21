@@ -1,3 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title><?= $data['tittle'] ?></title>
+    <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
+    <meta content="Themesdesign" name="author" />
+    <link rel="shortcut icon" href="Public/Assets/images/icono.png">
+    <link href="Public/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="Public/Assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <?php
+    require_once('Public/Views/vector/header.php');
+    ?>
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
 <h1 class="page-header">
     <?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?>
 </h1>
@@ -85,3 +111,29 @@
         });
     })
 </script>
+
+</div>
+</div> 
+</div>
+
+
+    <!-- END wrapper -->
+    <?php
+    require_once('Public/Views/vector/footer.php');
+    require_once('Public/Views/components/scripts.php');
+    ?>
+    <!-- jQuery  -->
+    <script src="Public/Assets/js/jquery.min.js"></script>
+    <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="Public/Assets/js/metismenu.min.js"></script>
+    <script src="Public/Assets/js/jquery.slimscroll.js"></script>
+    <script src="Public/Assets/js/waves.min.js"></script>
+
+    <!-- Parsley js -->
+    <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
+    <!-- App js -->
+    <script src="Public/Assets/js/app.js" defer></script>
+    <script src="Public/Assets/js/functions/clienteexterno.js" defer></script>
+</body>
+
+</html>
