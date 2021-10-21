@@ -66,6 +66,9 @@ class ClienteExternoController
 
     public function parser()
     {
+        $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula', 'repÚblica'];
+        $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
+        $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
         $arrDir =  getDirectory('repository');
         print_r($arrDir);
         if (!empty($arrDir)) {
@@ -73,12 +76,10 @@ class ClienteExternoController
                 $text = strtolower(parserPdf($file));
                 if (!empty($text)) {
                     $arrText = explode(' ', $text);
-                    $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula'];
-                    $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
-                    $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
 
                     foreach ($arrText as $text) {
                         foreach ($keyWordTipoDocumento as $tipoDoc) {
+                            $tipoDoc = trim($tipoDoc);
                             if ($text == $tipoDoc) {
                                 echo "Encontro alguna concordancia con: " . $tipoDoc;
                                 $r = true;
@@ -89,11 +90,8 @@ class ClienteExternoController
                                 $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
                                 $path = trim(getcwd() . '\repository\ ') . $file;
                                 if (file_exists($path)) {
-                                    if (copy($path, $destino) && unlink($path)) {
-                                        echo '<br>';
-                                        echo "<b>El archivo ha sido movido y eliminado. Tipos de documento</b>";
-                                        echo '<br />';
-                                    }
+                                    copy($path, $destino);
+                                    unlink($path);
                                 }
                             } else {
                                 $r = false;
@@ -113,11 +111,8 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        if (copy($path, $destino) && unlink($path)) {
-                                            echo '<br>';
-                                            echo "<b>El archivo ha sido movido y eliminado. Facturas</b>";
-                                            echo '<br />';
-                                        }
+                                        copy($path, $destino);
+                                        unlink($path);
                                     }
                                 } else {
                                     $r = false;
@@ -138,11 +133,8 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        if (copy($path, $destino) && unlink($path)) {
-                                            echo '<br>';
-                                            echo "<b>El archivo ha sido movido y eliminado. Cuentas de cobro.</b>";
-                                            echo '<br />';
-                                        }
+                                        copy($path, $destino);
+                                        unlink($path);
                                     }
                                 } else {
                                     $r = false;
@@ -151,15 +143,88 @@ class ClienteExternoController
                         }
                     }
                 } else {
-                    // $textImg = imageToText2();
-                    // echo '<br /><br />' . $textImg . '<br/><br />';
+                    $image = strtolower(parserImage($file));
+                    $arrTextImage = explode(' ', $image);
+                    // echo $arrTextImage[3];
+                    // var_dump((trim($arrTextImage[2]) == trim('colombia identificaciÓn')));
+                    // die();
+                    format($arrTextImage);
+                    foreach ($arrTextImage as $text) {
+                        foreach ($keyWordTipoDocumento as $tipoDoc) {
+                            // echo $text . '<br>';
+                            // echo  '<b>' . $tipoDoc . '</b><br>';
+                            if ($text == $tipoDoc) {
+                                echo "Encontro alguna concordancia con: " . $tipoDoc;
+                                $r = true;
+                                $destino = 'repository/Tipos_documento';
+                                if (!file_exists($destino)) {
+                                    mkdir($destino, 0777, true);
+                                }
+                                $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
+                                $path = trim(getcwd() . '\repository\ ') . $file;
+                                if (file_exists($path)) {
+                                    copy($path, $destino);
+                                    unlink($path);
+                                }
+                            } else {
+                                $r = false;
+                            }
+                        }
+                    }
+
+                    if ($r == false) {
+                        foreach ($arrTextImage as $text) {
+                            foreach ($keyWordFactura as $factura) {
+                                // echo $text . '<br>';
+                                // echo '<b>' . $factura . '</b><br>';
+                                if ($text == $factura) {
+                                    echo "Encontro alguna concordancia con: " . $factura;
+                                    $r = true;
+                                    $destino = 'repository/Facturas';
+                                    if (!file_exists($destino)) {
+                                        mkdir($destino, 0777, true);
+                                    }
+                                    $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
+                                    $path = trim(getcwd() . '\repository\ ') . $file;
+                                    if (file_exists($path)) {
+                                        copy($path, $destino);
+                                        unlink($path);
+                                    }
+                                } else {
+                                    $r = false;
+                                }
+                            }
+                        }
+                    }
+                    if ($r == false) {
+                        foreach ($arrTextImage as $text) {
+                            foreach ($keyWordCuentaCobro as $cuentaC) {
+                                // echo $text . '<br>';
+                                // echo '<b>' . $cuentaC . '<b/><br>';
+                                if ($text == $cuentaC) {
+                                    echo "Encontro alguna concordancia con: " . $cuentaC;
+                                    $r = true;
+                                    $destino = 'repository/Cuentas_cobro';
+                                    if (!file_exists($destino)) {
+                                        mkdir($destino, 0777, true);
+                                    }
+                                    $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
+                                    $path = trim(getcwd() . '\repository\ ') . $file;
+                                    if (file_exists($path)) {
+                                        copy($path, $destino);
+                                        unlink($path);
+                                    }
+                                } else {
+                                    $r = false;
+                                }
+                            }
+                        }
+                    }
                 }
             }
+        } else {
+            $arrResponse = ['status' => true, 'msg' => 'Todos los archivos han sido movidos a sus respectivos directorios !!'];
+            echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
         }
-    }
-
-    public function parserImage()
-    {
-        $image = parserImage('documento_identidad.pdf');
     }
 }

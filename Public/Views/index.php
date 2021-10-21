@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Index</title>
-  
+
 
   <!-- Favicons -->
   <link href="Public/Assets/images/Icono.png" rel="icon">
@@ -21,7 +21,7 @@
   <link href="vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  
+
 
   <!-- Template Main CSS File -->
   <link href="Public/Assets/css/index.css" rel="stylesheet">
@@ -68,7 +68,7 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <a href="<?=URL?>?c=login&a=index" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Ingresar</a>
+      <a href="<?= URL ?>?c=login&a=index" class="appointment-btn scrollto"><span class="d-none d-md-inline"></span>Ingresar</a>
 
     </div>
   </header><!-- End Header -->
@@ -92,9 +92,9 @@
             <div class="content">
               <h3>Financialfast</h3>
               <p>
-              FinancialFast es un sistema de información que le permitirá al usuario ingresar su documento y a partir de este evidenciara a que tipo de documentos establecidos por el sistema el archivo pertenece.
+                FinancialFast es un sistema de información que le permitirá al usuario ingresar su documento y a partir de este evidenciara a que tipo de documentos establecidos por el sistema el archivo pertenece.
               </p>
-             
+
             </div>
           </div>
           <div class="col-lg-8 d-flex align-items-stretch">
@@ -140,7 +140,7 @@
 
           <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h3>Ventajas</h3>
-            <p> 
+            <p>
               El sistema presenta gran variedad de ventajas y algunas de estas son las siguientes:
             </p>
 
@@ -163,12 +163,6 @@
       </div>
     </section><!-- End About Section -->
 
-    
-
-    
-    
-   
-    
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
@@ -223,7 +217,7 @@
               <div class="form-group mt-3">
                 <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
               </div>
-             
+
               <div class="text-center"><button type="submit">Enviar</button></div>
             </form>
 
@@ -254,6 +248,9 @@
     </div>
   </footer><!-- End Footer -->
 
- 
+  <?php
+  require_once('Public/Views/components/scripts.php');
+  ?>
 </body>
+
 </html>
