@@ -17,7 +17,7 @@ class LoginController
      */
     public function index()
     {
-        $data['tittle'] = 'Iniciar sesión | Finanzal Fast';
+        $data['tittle'] = 'Iniciar sesión | Financialfast';
         require_once('Public/Views/signIn/login.php');
     }
 

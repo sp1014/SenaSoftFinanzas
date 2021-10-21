@@ -20,23 +20,7 @@
     require_once('Public/Views/vector/header.php');
     ?>
 
-    <div class="content-page">
-        <!-- Start content -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="page-title-box">
-                    <div class="row align-items-center">
-                        <div class="col-sm-6">
-                            <h4 class="page-title"></h4>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-right">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
-                            </ol>
-                        </div>
-                    </div> <!-- end row -->
-                </div>
+    
                 <!-- end page-title -->
 
                 <div class="row  d-flex justify-content-center">

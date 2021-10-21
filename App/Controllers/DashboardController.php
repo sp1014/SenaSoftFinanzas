@@ -7,7 +7,7 @@ class DashboardController
      */
     public function index()
     {
-        $data['tittle'] = 'Dashboard | Finanzal Fast';
+        $data['tittle'] = 'Dashboard | Financialfast';
         require_once('Public/Views/dashboard/index.php');
     }
 }

@@ -18,7 +18,7 @@ class AdminController
      */
     public function index()
     {
-        $data['tittle'] = 'Usuarios | Finanzal Fast';
+        $data['tittle'] = 'Usuarios | Financialfast';
         require_once('Public/Views/admin/admin.php');
     }
 

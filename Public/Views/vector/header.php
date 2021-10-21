@@ -70,7 +70,7 @@
                 <ul class="metismenu" id="side-menu">
                     <li class="menu-title">Menu</li>
                     <li>
-                        <a href="<?=URL?>?c=index&a=index" class="waves-effect">
+                        <a href="<?=URL?>?c=dashboard&a=index" class="waves-effect">
                         <i class="fas fa-home"></i><span>Inicio</span>
                         </a>
                     </li>
