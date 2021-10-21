@@ -16,7 +16,19 @@
 
         <nav class="navbar-custom">
             <ul class="navbar-right list-inline float-right mb-0">
-              
+                <!-- language-->
+                <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
+                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                        <img src="Public/Assets/images/flags/us_flag.jpg" class="mr-2" height="12" alt="" /> English <span class="mdi mdi-chevron-down"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated language-switch">
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/french_flag.jpg" alt="" height="16" /><span> French </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/spain_flag.jpg" alt="" height="16" /><span> Spanish </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/russia_flag.jpg" alt="" height="16" /><span> Russian </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/germany_flag.jpg" alt="" height="16" /><span> German </span></a>
+                        <a class="dropdown-item" href="#"><img src="Public/Assets/images/flags/italy_flag.jpg" alt="" height="16" /><span> Italian </span></a>
+                    </div>
+                </li>
 
                 <!-- full screen -->
                 <li class=" notification-list list-inline-item d-none d-md-inline-block">
@@ -55,7 +67,14 @@
                         <i class="mdi mdi-menu"></i>
                     </button>
                 </li>
-              
+                <li class="d-none d-md-inline-block">
+                    <form role="search" class="app-search">
+                        <div class="form-group mb-0">
+                            <input type="text" class="form-control" placeholder="Search..">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                </li>
             </ul>
         </nav>
     </div>
@@ -80,7 +99,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?=URL?>?c=&a=index" class="waves-effect">
+                        <a href="index.html" class="waves-effect">
                         <i class="fas fa-folder-open"></i><span>Consultar archivos</span>
                         </a>
                     </li>
@@ -104,4 +123,19 @@
         <!-- Sidebar -left -->
     </div>
     <!-- ============================================================== -->
-    
+    <div class="content-page">
+        <!-- Start content -->
+        <div class="content">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <div class="row align-items-center">
+                        <div class="col-sm-6">
+                            <h4 class="page-title"></h4>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-right">
+                                <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
+                            </ol>
+                        </div>
+                    </div> <!-- end row -->
+                </div>
