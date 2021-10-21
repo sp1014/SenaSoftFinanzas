@@ -33,4 +33,10 @@ class ClienteExterno extends Crud
         $sql = "SELECT id, nombre FROM categoria";
         return $this->all($sql);
     }
+
+    public function getTiposDocumento()
+    {
+        $sql = "SELECT id, tipo_documento FROM tipodocumento";
+        return $this->all($sql);
+    }
 }

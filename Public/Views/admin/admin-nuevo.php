@@ -30,8 +30,7 @@
                         <div class="form-group">
                             <label>Tipo Documento</label>
                             <!-- <input type="text" name="id_tipodocumento" value="" class="form-control"  data-validacion-tipo="requerido|min:100" />-->
-
-                            <select name="id_tipodocumento" id="txtCategoria" class="form-control" value="<?php echo $pvd->id_tipodocumento; ?>" required>
+                            <select name="id_tipodocumento" id="txtTipoDoc" class="form-control" value="<?php echo $pvd->id_tipodocumento; ?>" required>
                             </select>
                         </div>
 

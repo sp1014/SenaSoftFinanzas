@@ -1,4 +1,5 @@
 const selectListCategories = document.getElementById('txtCategoria');
+const selectListDocumentType = document.getElementById('txtTipoDoc');
 const formClienteExt = document.querySelector('#form-clienteex');
 
 const loadCategories = async () => {
@@ -11,6 +12,26 @@ const loadCategories = async () => {
             data.forEach(item => {
                 selectListCategories.innerHTML += `
                                                     <option value="${item.id}">${item.nombre}</option>
+                                                `;
+            })
+        } else {
+            console.log(data)
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+const loadDocumentType = async () => {
+    const url = `${base_url}?c=clienteexterno&a=getTiposDocumento`;
+    try {
+        const req = await fetch(url);
+        const { status, data } = await req.json();
+        if (status) {
+            selectListDocumentType.innerHTML = '<option value="" selected disabled>-- Selecciona un tipo documento --</option>';
+            data.forEach(item => {
+                selectListDocumentType.innerHTML += `
+                                                    <option value="${item.id}">${item.tipo_documento}</option>
                                                 `;
             })
         } else {
@@ -53,7 +74,10 @@ const insert = async () => {
     formClienteExt.reset();
 }
 
-document.addEventListener('DOMContentLoaded', loadCategories);
+document.addEventListener('DOMContentLoaded', () => {
+    loadCategories();
+    loadDocumentType();
+});
 
 if (formClienteExt) {
     formClienteExt.addEventListener('submit', validateForm);

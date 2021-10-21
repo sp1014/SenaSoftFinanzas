@@ -35,9 +35,7 @@ class AdminController
         if (isset($_REQUEST['id'])) {
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
-
         //Llamado de las vistas.
-
         require_once 'Public/Views/admin/admin-editar.php';
     }
 
@@ -45,9 +43,7 @@ class AdminController
     public function Nuevo()
     {
         $pvd = new admin();
-
         //Llamado de las vistas.
-
         require_once 'Public/Views/admin/admin-nuevo.php';
     }
 

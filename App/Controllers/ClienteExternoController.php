@@ -68,6 +68,19 @@ class ClienteExternoController
         die();
     }
 
+    public function getTiposDocumento()
+    {
+        $model = new ClienteExterno();
+        $request = $model->getTiposDocumento();
+        if (!empty($request)) {
+            $arrResp = ['status' => true, 'data' => $request];
+        } else {
+            $arrResp = ['status' => false, 'data' => 'no'];
+        }
+        echo json_encode($arrResp, JSON_UNESCAPED_UNICODE);
+        die();
+    }
+
     public function parser()
     {
         $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula', 'repÚblica'];
