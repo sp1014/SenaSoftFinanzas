@@ -12,7 +12,7 @@
 
 <body>
     <?php
-    require_once('Public/Views/vector/header.php');
+    require_once('Views/vector/header.php');
     ?>
     <div class="row">
         <div class="col-sm-6 col-xl-3">

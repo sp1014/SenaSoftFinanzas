@@ -4,7 +4,7 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-
+.container-fluid
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -542,8 +542,7 @@ pre code {
     width: 100%;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto
+    
 }
 
 @media (min-width:576px) {
