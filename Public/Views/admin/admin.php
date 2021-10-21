@@ -30,12 +30,7 @@
     ?>
 
   
-                        <!-- end page-title -->
-                        <div class="well well-sm text-right">
-                        <a class="btn btn-primary" href="?c=admin&a=Nuevo">Nuevo Usuario</a>
-                        </div>
-                    </div> <!-- end row -->
-                </div>
+                     
                 <!-- end page-title -->
                 <div class="well well-sm text-right">
                     <a class="btn btn-primary" href="?c=admin&a=Nuevo">Nuevo Usuario</a>
