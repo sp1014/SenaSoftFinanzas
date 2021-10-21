@@ -26,6 +26,13 @@
                     </div>
                     <h5 class="font-18 text-center">Iniciar Sesión</h5>
                     <form class="form-horizontal m-t-30" id="signIn">
+                   
+                    <div class="form-group">
+                   <label> Seleccione la Voz:</label> 
+                   <select  id='voiceList' class="form-control">
+                    </div>
+
+                    </select>     
                         <div class="form-group">
                             <div class="col-12">
                                 <label>Correo</label>
@@ -72,6 +79,92 @@
             $('form').parsley();
         });
     </script>
+    <script>
+    var txtInput1 = document.querySelector('#txtEmail');
+
+
+    var txtInput3 = document.querySelector('#txtPass');
+    var txtInput4 = document.querySelector('#text4');
+
+    var txtInput5 = document.querySelector('#myList');
+
+
+    var voiceList = document.querySelector('#voiceList');
+    var synth = window.speechSynthesis;
+    var voices = [];
+
+    //PopulateVoices();
+    if (speechSynthesis !== undefined) {
+        speechSynthesis.onvoiceschanged = PopulateVoices;
+    }
+
+    txtInput1.addEventListener('mouseover', () => {
+        var toSpeak = new SpeechSynthesisUtterance(txtInput1.value);
+        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+            if (voice.name === selectedVoiceName) {
+                toSpeak.voice = voice;
+            }
+        });
+        synth.speak(toSpeak);
+    });
+
+    txtInput2.addEventListener('mouseover', () => {
+        var toSpeak = new SpeechSynthesisUtterance(txtInput2.value);
+        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+            if (voice.name === selectedVoiceName) {
+                toSpeak.voice = voice;
+            }
+        });
+        synth.speak(toSpeak);
+    });
+    txtInput3.addEventListener('click', () => {
+        var toSpeak = new SpeechSynthesisUtterance(txtInput3.value);
+        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+            if (voice.name === selectedVoiceName) {
+                toSpeak.voice = voice;
+            }
+        });
+        synth.speak(toSpeak);
+    });
+    txtInput4.addEventListener('click', () => {
+        var toSpeak = new SpeechSynthesisUtterance(txtInput4.value);
+        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+            if (voice.name === selectedVoiceName) {
+                toSpeak.voice = voice;
+            }
+        });
+        synth.speak(toSpeak);
+    });
+    txtInput5.addEventListener('mouseover', () => {
+        var toSpeak = new SpeechSynthesisUtterance(txtInput5.value);
+        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+        voices.forEach((voice) => {
+            if (voice.name === selectedVoiceName) {
+                toSpeak.voice = voice;
+            }
+        });
+        synth.speak(toSpeak);
+    });
+
+    function PopulateVoices() {
+        voices = synth.getVoices();
+        var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+        voiceList.innerHTML = '';
+        voices.forEach((voice) => {
+            var listItem = document.createElement('option');
+            listItem.textContent = voice.name;
+            listItem.setAttribute('data-lang', voice.lang);
+            listItem.setAttribute('data-name', voice.name);
+            voiceList.appendChild(listItem);
+        });
+
+        voiceList.selectedIndex = selectedIndex;
+    }
+</script>
 </body>
 
 </html>
