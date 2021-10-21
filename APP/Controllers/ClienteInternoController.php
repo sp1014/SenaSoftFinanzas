@@ -19,7 +19,7 @@ class ClienteController
     public function index()
     {
         $data['tittle'] = 'Usuarios | Finanzal Fast';
-        require_once('Public/Views/admin/admin.php');
+        require_once('Public/Views/clienteinterno/clienteinterno.php');
     }
 
 
@@ -43,7 +43,7 @@ class ClienteController
 
         //Llamado de las vistas.
       
-        require_once 'Public/Views/admin/admin-nuevo.php';
+        require_once 'Public/Views/cliente/clienteinterno.php';
       
     }
 
@@ -64,7 +64,7 @@ class ClienteController
         //Registro al modelo Usuarios.
         $this->model->Registrar($pvd);
 
-        header('Location: ?c=admin&a=Nuevo.php');
+        header('Location: ?c=cliente&a=Nuevo.php');
     }
 
     //Método que modifica el modelo de un Usuario.
@@ -83,13 +83,13 @@ class ClienteController
 
         $this->model->Actualizar($pvd);
 
-        header('Location: ?c=admin&a=insert');
+        header('Location: ?c=cliente&a=insert');
     }
 
     //Método que elimina el Usuario con el id dado.
     public function Eliminar(){
         $this->model->Eliminar($_REQUEST['id']);
-        header('Location: ?c=admin&a=Nuevo.php');
+        header('Location: ?c=cliente&a=Nuevo.php');
     }
 }
 

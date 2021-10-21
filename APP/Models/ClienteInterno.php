@@ -1,5 +1,6 @@
 <?php
-class user
+
+class cliente
 {
 	//Atributo para conexión a SGBD
 	private $pdo;
@@ -29,7 +30,7 @@ class user
 	}
 
 	//Este método selecciona todas las tuplas de la tabla
-	//proveedor en caso de error se muestra por pantalla.
+
 	public function Listar()
 	{
 		try
@@ -50,17 +51,17 @@ class user
 		}
 	}
 
-	//Este método obtiene los datos del proveedor a partir del nit
+	//Este método obtiene los datos del usuario a partir del id
 	//utilizando SQL.
-	public function Obtener($nit)
+	public function Obtener($id)
 	{
 		try
 		{
 			//Sentencia SQL para selección de datos utilizando
-			//la clausula Where para especificar el nit del proveedor.
+			//la clausula Where para especificar el id del usuario.
 			$stm = $this->pdo->prepare("SELECT * FROM datospersonales WHERE id = ?");
-			//Ejecución de la sentencia SQL utilizando el parámetro nit.
-			$stm->execute(array($nit));
+			//Ejecución de la sentencia SQL utilizando el parámetro id.
+			$stm->execute(array($id));
 			return $stm->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e)
 		{
@@ -68,8 +69,8 @@ class user
 		}
 	}
 
-	//Este método elimina la tupla proveedor dado un nit.
-	public function Eliminar($nit)
+	//Este método elimina la tupla usuario dado un id.
+	public function Eliminar($id)
 	{
 		try
 		{
@@ -78,7 +79,7 @@ class user
 			$stm = $this->pdo
 			            ->prepare("DELETE FROM datospersonales WHERE id = ?");
 
-			$stm->execute(array($nit));
+			$stm->execute(array($id));
 		} catch (Exception $e)
 		{
 			die($e->getMessage());
@@ -86,7 +87,7 @@ class user
 	}
 
 	//Método que actualiza una tupla a partir de la clausula
-	//Where y el nit del proveedor.
+	//Where y el id del usuario.
 	public function Actualizar($data)
 	{
 		try
@@ -123,8 +124,8 @@ class user
 		}
 	}
 
-	//Método que registra un nuevo proveedor a la tabla.
-	public function Registrar(user $data)
+	//Método que registra un nuevo usuario a la tabla.
+	public function Registrar(cliente $data)
 	{
 		try
 		{
