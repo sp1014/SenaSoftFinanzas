@@ -72,17 +72,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?=URL?>?c=cliente&a=index" class="waves-effect">
                         <i class="fas fa-folder-open"></i><span>Consultar archivos</span>
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?=URL?>?c=categoria&a=index" class="waves-effect">
                         <i class="fas fa-plus"></i><span>Crear categorias</span>
                         </a>
                     </li>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?=URL?>?c=admin&a=Nuevo" class="waves-effect">
                         <i class="fas fa-user"></i><span>Registrar Usuario</span>
                         </a>
                     </li>
@@ -92,10 +92,6 @@
             </div>
             <!-- Sidebar -->
             <div class="clearfix"></div>
-<<<<<<< HEAD
-=======
-        </>
->>>>>>> d8ae9630972885a03ea066dfe2d4616beae19eba
         <!-- Sidebar -left -->
     </div>
     <!-- ============================================================== -->
