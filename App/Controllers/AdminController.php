@@ -10,8 +10,12 @@ class AdminController
      * Método constructor que carga el archivo del modelo que va a estar asociado. 
      */
     public function __CONSTRUCT()
-    { $this->model = new admin();
-        
+    {
+        session_start();
+        $this->model = new admin();
+        if (!isset($_SESSION['login'])) {
+            header('Location: ' . URL . '?c=Login&a=index');
+        }
     }
     /**
      * Carga la vista de index
@@ -23,32 +27,33 @@ class AdminController
     }
 
 
-    public function Crud(){
+    public function Crud()
+    {
         $pvd = new admin();
 
         //Se obtienen los datos de los usuarios a editar.
-        if(isset($_REQUEST['id'])){
+        if (isset($_REQUEST['id'])) {
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
 
         //Llamado de las vistas.
-      
+
         require_once 'Public/Views/admin/admin-editar.php';
-      
-  }
+    }
 
     //Llamado a la vista admin-nuevo
-    public function Nuevo(){
+    public function Nuevo()
+    {
         $pvd = new admin();
 
         //Llamado de las vistas.
-      
+
         require_once 'Public/Views/admin/admin-nuevo.php';
-      
     }
 
     //Método que registrar al modelo un nuevo usuario.
-    public function Guardar(){
+    public function Guardar()
+    {
         $pvd = new admin();
 
         //Captura de los datos del formulario (vista).
@@ -68,7 +73,8 @@ class AdminController
     }
 
     //Método que modifica el modelo de un Usuario.
-    public function Editar(){
+    public function Editar()
+    {
         $pvd = new admin();
 
         $pvd->id = $_REQUEST['id'];
@@ -87,13 +93,9 @@ class AdminController
     }
 
     //Método que elimina el Usuario con el id dado.
-    public function Eliminar(){
+    public function Eliminar()
+    {
         $this->model->Eliminar($_REQUEST['id']);
         header('Location: ?c=admin&a=Nuevo.php');
     }
 }
-
-
-
-
- 

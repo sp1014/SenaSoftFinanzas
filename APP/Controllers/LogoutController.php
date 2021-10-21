@@ -6,6 +6,6 @@ class LogoutController
         session_start();
         session_unset();
         session_destroy();
-        header('Location:' . URL . 'Login');
+        header('Location:' . URL . '?c=dashboard&a=index');
     }
 }
