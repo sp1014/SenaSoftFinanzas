@@ -16,7 +16,7 @@
 
         <nav class="navbar-custom">
             <ul class="navbar-right list-inline float-right mb-0">
-               
+
 
                 <!-- full screen -->
                 <li class=" notification-list list-inline-item d-none d-md-inline-block">
@@ -25,8 +25,8 @@
                     </a>
                 </li>
 
-                
-               
+
+
                 <li class="dropdown notification-list list-inline-item">
                     <div class="dropdown notification-list nav-pro-img">
                         <a class="dropdown-toggle nav-link arrow-none nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
@@ -50,7 +50,7 @@
                         <i class="mdi mdi-menu"></i>
                     </button>
                 </li>
-               
+
             </ul>
         </nav>
     </div>
@@ -65,32 +65,32 @@
                 <ul class="metismenu" id="side-menu">
                     <li class="menu-title">Menu</li>
                     <li>
-                        <a href="<?=URL?>?c=dashboard&a=index" class="waves-effect">
-                        <i class="fas fa-home"></i><span>Inicio</span>
+                        <a href="<?= URL ?>?c=dashboard&a=index" class="waves-effect">
+                            <i class="fas fa-home"></i><span>Inicio</span>
                         </a>
                     </li>
                     <li>
-                        <a href="<?=URL?>?c=clienteexterno&a=index" class="waves-effect">
-                        <i class="fas fa-file-import"></i><span>Subir archivo</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="index.html" class="waves-effect">
-                        <i class="fas fa-folder-open"></i><span>Consultar archivos</span>
+                        <a href="<?= URL ?>?c=clienteexterno&a=index" class="waves-effect">
+                            <i class="fas fa-file-import"></i><span>Subir archivo</span>
                         </a>
                     </li>
                     <li>
                         <a href="index.html" class="waves-effect">
-                        <i class="fas fa-plus"></i><span>Crear categorias</span>
+                            <i class="fas fa-folder-open"></i><span>Consultar archivos</span>
                         </a>
                     </li>
                     <li>
                         <a href="index.html" class="waves-effect">
-                        <i class="fas fa-user"></i><span>Registrar Usuario</span>
+                            <i class="fas fa-plus"></i><span>Crear categorias</span>
                         </a>
                     </li>
-                        </ul>
+                    <li>
+                        <a href="index.html" class="waves-effect">
+                            <i class="fas fa-user"></i><span>Registrar Usuario</span>
+                        </a>
                     </li>
+                </ul>
+                </li>
                 </ul>
             </div>
             <!-- Sidebar -->
