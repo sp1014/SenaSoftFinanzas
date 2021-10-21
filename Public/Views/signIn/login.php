@@ -26,7 +26,13 @@
                     </div>
                     <h5 class="font-18 text-center">Iniciar Sesión</h5>
                     <form class="form-horizontal m-t-30" id="signIn">
-                    Seleccione la Voz: <select  id='voiceList'></select>
+                   
+                    <div class="form-group">
+                   <label> Seleccione la Voz:</label> 
+                   <select  id='voiceList' class="form-control">
+                    </div>
+
+                    </select>     
                         <div class="form-group">
                             <div class="col-12">
                                 <label>Correo</label>
