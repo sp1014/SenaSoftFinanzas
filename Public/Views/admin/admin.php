@@ -29,23 +29,7 @@
     require_once('Public/Views/vector/header.php');
     ?>
 
-    <div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container-fluid">
-                        <div class="page-title-box">
-                            <div class="row align-items-center">
-                                <div class="col-sm-6">
-                                    <h4 class="page-title">Usuario</h4>
-                                </div>
-                                <div class="col-sm-6">
-                                    <ol class="breadcrumb float-right">
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
-                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Usuario</a></li>
-                                    </ol>
-                                </div>
-                            </div> <!-- end row -->
-                        </div>
+  
                         <!-- end page-title -->
                         <div class="well well-sm text-right">
                         <a class="btn btn-primary" href="?c=admin&a=Nuevo">Nuevo Usuario</a>

@@ -20,27 +20,15 @@
     require_once('Public/Views/vector/header.php');
     ?>
 
-    
-<div class="content-page">
-                <!-- Start content -->
-                <div class="content">
-                    <div class="container-fluid">
-                        <div class="page-title-box">
-                            <div class="row align-items-center">
-                                <div class="col-sm-6">
-                                    <h4 class="page-title"></h4>
-                                </div>
-                                <div class="col-sm-6">
-                                <ol class="breadcrumb">
-                                <li><a href="?c=admin">Usuarios</a></li>
-                                <li class="active"><?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?></li>
-                                </ol>
-                                </div>
-                            </div> <!-- end row -->
-                        </div>
-<div class="container">
+<div class="row  d-flex justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="card m-b-30">
+                            <div class="card-body">
+
+
+<div class="containe row  d-flex justify-content-center">
   <div class="row">
-    <div class="col-sm">
+    <div class="col-sm col-lg-12">
 <h1 class="page-header">
     <?php echo $pvd->id != null ? $pvd->nombre : 'Nuevo Registro'; ?>
 </h1>
@@ -52,38 +40,38 @@
 
     <div class="form-group">
         <label>Nombre</label>
-        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
 
     <div class="form-group">
         <label>Tipo Documento</label>
-        <input type="text" name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
 
     <div class="form-group">
         <label>Numero Documento</label>
-        <input type="text" name="numero_documento" value="<?php echo $pvd->numero_documento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="numero_documento" readonly value="<?php echo $pvd->numero_documento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
 
     <div class="form-group">
         <label>Teléfono</label>
-        <input type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
+        <input required type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
     </div>
 
     <div class="form-group">
         <label>Correo</label>
-        <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="correo" readonly value="<?php echo $pvd->correo; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
 
     <div class="form-group">
         <label>Clave</label>
-        <input type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:100" />
     </div>
 
     <div class="form-group">
         <label>Rol</label>
     
-        <select name="tipo_rol"   value="<?php echo $pvd->tipo_rol; ?>">
+        <select name="tipo_rol" class="form-select form-control" readonly  value="<?php echo $pvd->tipo_rol; ?>">
             <option value="Administrador">Administrador</option>
             <option value="Cliente Interno">Cliente Interno</option>
             <option value="Cliente Externo">Cliente Externo</option>
@@ -93,19 +81,41 @@
 
     <div class="form-group">
         <label>Estado</label>
-        <input type="text" name="estado" value="<?php echo $pvd->estado; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+        <input required type="text" name="estado" value="<?php echo $pvd->estado; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
-    <hr />
 
-    <div class="text-right">
-        <button class="btn btn-success">Actualizar</button>
-    </div>
+    <div class="form-group">
+         <div>
+                <button type="submit" class="btn btn-primary waves-effect waves-light">
+                     Actualizar
+                </button>
+        </div>
 </form>
 
-<script>
-    $(document).ready(function(){
-        $("#frm-admin").submit(function(){
-            return $(this).validate();
-        });
-    })
-</script>
+</div>
+</div>
+</div> </div></div></div></div>
+<?php
+                    require_once('Public/Views/vector/footer.php');
+                    require_once('Public/Views/components/scripts.php');
+                    ?>
+
+  <!-- jQuery  -->
+  <script src="Public/Assets/js/jquery.min.js"></script>
+                    <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
+                    <script src="Public/Assets/js/metismenu.min.js"></script>
+                    <script src="Public/Assets/js/jquery.slimscroll.js"></script>
+                    <script src="Public/Assets/js/waves.min.js"></script>
+
+                    <!-- Parsley js -->
+                    <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
+                    <!-- App js -->
+                    <script src="Public/Assets/js/app.js" defer></script>
+
+                    <script defer>
+                        $(document).ready(function() {
+                            $('form').parsley();
+                        });
+                    </script>
+                    
+</body>

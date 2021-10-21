@@ -18,23 +18,7 @@
 
 
 
-    <div class="content-page">
-        <!-- Start content -->
-        <div class="content">
-            <div class="container-fluid">
-                <div class="page-title-box">
-                    <div class="row align-items-center">
-                        <div class="col-sm-6">
-                            <h4 class="page-title">Nuevo registro</h4>
-                        </div>
-                        <div class="col-sm-6">
-                            <ol class="breadcrumb float-right">
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
-                            </ol>
-                        </div>
-                    </div> <!-- end row -->
-                </div>
+    
                 <!-- end page-title -->
 
                 <div class="row  d-flex justify-content-center">
@@ -46,14 +30,14 @@
 
                                     <div class="form-group">
                                         <label>Nombre</label>
-                                        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" />
+                                        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" required />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Tipo Documento</label>
                                         <!-- <input type="text" name="id_tipodocumento" value="" class="form-control"  data-validacion-tipo="requerido|min:100" />-->
 
-                                        <select name="id_tipodocumento" class="form-control" value="<?php echo $pvd->id_tipodocumento; ?>">
+                                        <select name="id_tipodocumento" class="form-control" value="<?php echo $pvd->id_tipodocumento; ?>" required>
                                             <option value="1">CC</option>
                                             <option value="2">TI</option>
                                             <option value="3">CE</option>
@@ -66,27 +50,27 @@
 
                                     <div class="form-group">
                                         <label>Numero Docuemnto</label>
-                                        <input type="text" name="numero_documento" value="<?php echo $pvd->numero_documento; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                        <input type="text" name="numero_documento" data-parsley-type="number" value="<?php echo $pvd->numero_documento; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Telefono</label>
-                                        <input type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                        <input type="text" name="telefono" data-parsley-type="number" value="<?php echo $pvd->telefono; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Correo</label>
-                                        <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                        <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" data-parsley-type="email" class="form-control" data-validacion-tipo="requerido|min:10" />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Clave</label>
-                                        <input type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:10" />
+                                        <input type="password" name="pass" value="<?php echo $pvd->pass; ?>" data-parsley-type="password" class="form-control" required data-validacion-tipo="requerido|min:10" />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Rol</label>
-                                        <select class="form-select form-control" name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>">
+                                        <select class="form-select form-control" name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>" required>
                                             <option value="Administrador">Administrador</option>
                                             <option value="Cliente Interno">Cliente Interno</option>
                                             <option value="Cliente Externo">Cliente Externo</option>
@@ -95,7 +79,7 @@
 
                                     <div class="form-group">
                                         <label>Estado</label>
-                                        <select class="form-select form-control" name="estado" value="<?php echo $pvd->estado; ?>">
+                                        <select class="form-select form-control" name="estado" value="<?php echo $pvd->estado; ?>" required>
                                             <option value="1">Activo</option>
                                             <option value="0">Inactivo</option>
                                         </select>
