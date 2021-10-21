@@ -64,7 +64,7 @@ class AdminController
         //Registro al modelo Usuarios.
         $this->model->Registrar($pvd);
 
-        header('Location: index.php');
+        header('Location: ?c=admin&a=Nuevo.php');
     }
 
     //Método que modifica el modelo de un Usuario.
@@ -83,13 +83,13 @@ class AdminController
 
         $this->model->Actualizar($pvd);
 
-        header('Location: index.php');
+        header('Location: ?c=admin&a=insert');
     }
 
     //Método que elimina el Usuario con el id dado.
     public function Eliminar(){
-        $this->model->Eliminar($_REQUEST['nit']);
-        header('Location: index.php');
+        $this->model->Eliminar($_REQUEST['id']);
+        header('Location: ?c=admin&a=Nuevo.php');
     }
 }
 

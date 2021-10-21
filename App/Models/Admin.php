@@ -53,7 +53,7 @@ class admin
 
 	//Este método obtiene los datos del usuario a partir del id
 	//utilizando SQL.
-	public function Obtener($nit)
+	public function Obtener($id)
 	{
 		try
 		{
@@ -61,7 +61,7 @@ class admin
 			//la clausula Where para especificar el id del usuario.
 			$stm = $this->pdo->prepare("SELECT * FROM datospersonales WHERE id = ?");
 			//Ejecución de la sentencia SQL utilizando el parámetro id.
-			$stm->execute(array($nit));
+			$stm->execute(array($id));
 			return $stm->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e)
 		{
@@ -70,7 +70,7 @@ class admin
 	}
 
 	//Este método elimina la tupla usuario dado un id.
-	public function Eliminar($nit)
+	public function Eliminar($id)
 	{
 		try
 		{
@@ -79,7 +79,7 @@ class admin
 			$stm = $this->pdo
 			            ->prepare("DELETE FROM datospersonales WHERE id = ?");
 
-			$stm->execute(array($nit));
+			$stm->execute(array($id));
 		} catch (Exception $e)
 		{
 			die($e->getMessage());
