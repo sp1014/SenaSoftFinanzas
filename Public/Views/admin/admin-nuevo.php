@@ -10,10 +10,6 @@
 <form id="frm-admin" action="?c=admin&a=Guardar" method="post" enctype="multipart/form-data">
 
 
-<div class="form-group">
-        <label>id</label>
-        <input type="text" name="id" value="<?php echo $pvd->id; ?>" class="form-control" data-validacion-tipo="requerido|min:100" />
-    </div>
 
 
     <div class="form-group">
@@ -23,7 +19,17 @@
 
     <div class="form-group">
         <label>Tipo Documento</label>
-        <input type="text" name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
+       <!-- <input type="text" name="id_tipodocumento" value="" class="form-control"  data-validacion-tipo="requerido|min:100" />-->
+
+        <select name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>">
+            <option value="1">CC</option>
+            <option value="2">TI</option>
+            <option value="3">CE</option>
+            <option value="4">RC</option>
+            <option value="5">PA</option>
+            
+            
+        </select>
     </div>
 
     <div class="form-group">
@@ -48,12 +54,27 @@
 
     <div class="form-group">
         <label>Rol</label>
-        <input type="text" name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
+        <select name="tipo_rol" value="<?php echo $pvd->tipo_rol; ?>">
+            <option value="Administrador">Administrador</option>
+            <option value="Cliente Interno">Cliente Interno</option>
+            <option value="Cliente Externo">Cliente Externo</option>
+           
+            
+            
+        </select>
+    
+    
     </div>
 
     <div class="form-group">
         <label>Estado</label>
-        <input type="text" name="estado" value="<?php echo $pvd->estado; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
+        <select name="estado" value="<?php echo $pvd->estado; ?>">
+            <option value="1">Activo</option>
+            <option value="0">Inactivo</option>
+        
+            
+        </select>
+    
     </div>
 
     <hr />
