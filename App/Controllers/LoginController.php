@@ -10,7 +10,11 @@ class LoginController
      */
     public function __construct()
     {
+        session_start();
         require_once('App/Models/Login.php');
+        if (isset($_SESSION['login'])) {
+            header('Location: ' . URL . '?c=dashboard&a=index');
+        }
     }
     /**
      * Carga la vista de index

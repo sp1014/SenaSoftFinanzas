@@ -7,7 +7,11 @@ class ClienteExternoController
      */
     public function __construct()
     {
+        session_start();
         require_once('App/Models/ClienteExterno.php');
+        if (!isset($_SESSION['login'])) {
+            header('Location: ' . URL . '?c=Login&a=index');
+        }
     }
     /**
      * Carga la vista de index

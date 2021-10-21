@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Administrador</title>
+    <title>Cliente Interno</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Themesdesign" name="author" />
 
@@ -48,17 +48,10 @@
                                 <table id="datatable" class="table table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                     <thead>
                                         <tr>
-                                            <th>Id</th>
+                                            <th>Categoria</th>
                                             <th>Nombre</th>
-                                            <th>Tipo Documento</th>
-                                            <th>Numero Documento</th>
-                                            <th>Telefono</th>
-                                            <th>Correo</th>
-                                            <th>Clave</th>
-                                            <th>Tipo de Rol</th>
-                                            <th>Estado</th>
-                                            <th>Acciones</th>
-                                            <th>Acciones</th>
+                                            <th>Docuemento PDF</th>
+                                            
                                         </tr>
                                     </thead>
 
@@ -67,24 +60,12 @@
 
                                         <?php foreach ($this->model->Listar() as $r) : ?>
                                             <tr>
-                                                <td><?php echo $r->id; ?></td>
-                                                <td><?php echo $r->nombre; ?></td>
-                                                <td><?php echo $r->id_tipodocumento; ?></td>
-                                                <td><?php echo $r->numero_documento; ?></td>
-                                                <td><?php echo $r->telefono; ?></td>
-                                                <td><?php echo $r->correo; ?></td>
-                                                <td><?php echo $r->pass; ?></td>
-                                                <td><?php echo $r->tipo_rol; ?></td>
-                                                <td><?php echo $r->estado; ?></td>
-                                                <td>
+                                                <td><?php echo $r->categoria; ?></td>
+                                                <td><?php echo $r->datospersonales; ?></td>
 
-                                                    <a href="?c=admin&a=Crud&id=<?php echo $r->id; ?>" class="btn btn-primary">Editar</a>
-                                                </td>
-                                                <td>
-
-                                                    <a onclick="javascript:return confirm('¿Seguro de eliminar este registro?');" href="?c=admin&a=Eliminar&id=<?php echo $r->id; ?>" class="btn btn-primary">Eliminar</a>
-                                                </td>
-
+                                                <td><a href="/../../SenaSoftFinanzas/repository/<?php echo $r->categoria ?>/<?php echo $r->clienteexterno; ?>">PDF</a></td>
+                                            
+                                               
                                             </tr>
 
                                         <?php endforeach; ?>

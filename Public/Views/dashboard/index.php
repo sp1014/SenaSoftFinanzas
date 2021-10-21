@@ -79,17 +79,15 @@
                     <div>
                         <h5 class="font-16">Categorias nuevas</h5>
                     </div>
-                    <h3 class="mt-4">1  </h3>
+                    <h3 class="mt-4">1 </h3>
                     <div class="progress mt-4" style="height: 4px;">
                         <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                   <span class="float-right">82%</span>
+                    <span class="float-right">82%</span>
                 </div>
             </div>
         </div>
-
     </div>
-
     <p> </p>
     <div class="row">
         <div class="col-xl-6">

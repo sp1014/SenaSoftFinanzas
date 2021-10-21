@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>login</title>
+    <title><?= $data['tittle'] ?></title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Themesdesign" name="author" />
     <link rel="shortcut icon" href="Public/Assets/images/icono.png">
@@ -32,7 +32,12 @@
                    <select  id='voiceList' class="form-control"> 
                     </div>
 
-                    </select>     
+                        <div class="form-group">
+                            <label> Seleccione la Voz:</label>
+                            <select id='voiceList' class="form-control">
+                        </div>
+
+                        </select>
                         <div class="form-group">
                                 <label>Correo</label>
                                 <input class="form-control" type="email" id="txtEmail" name="txtEmail" placeholder="ejemplo@micorreo" required parsley-type="email">
@@ -68,7 +73,7 @@
     <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
     <!-- App js -->
     <script src="Public/Assets/js/app.js" defer></script>
-    <script src="Public/Assets/js/functions/signIn.js" defer></script>
+    <script src="Public/Assets/js/functions/signIn.js"></script>
 
     <script defer>
         $(document).ready(function() {
@@ -76,91 +81,89 @@
         });
     </script>
     <script>
-    var txtInput1 = document.querySelector('#txtEmail');
+        var txtInput1 = document.querySelector('#txtEmail');
+
+        var txtInput3 = document.querySelector('#txtPass');
+        var txtInput4 = document.querySelector('#text4');
+
+        var txtInput5 = document.querySelector('#myList');
 
 
-    var txtInput3 = document.querySelector('#txtPass');
-    var txtInput4 = document.querySelector('#text4');
+        var voiceList = document.querySelector('#voiceList');
+        var synth = window.speechSynthesis;
+        var voices = [];
 
-    var txtInput5 = document.querySelector('#myList');
+        //PopulateVoices();
+        if (speechSynthesis !== undefined) {
+            speechSynthesis.onvoiceschanged = PopulateVoices;
+        }
+        if (txtInput1) {
+            txtInput1.addEventListener('mouseover', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput1.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
 
+        if (txtInput3) {
+            txtInput3.addEventListener('click', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput3.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
 
-    var voiceList = document.querySelector('#voiceList');
-    var synth = window.speechSynthesis;
-    var voices = [];
+        if (txtInput4) {
+            txtInput4.addEventListener('click', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput4.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
 
-    //PopulateVoices();
-    if (speechSynthesis !== undefined) {
-        speechSynthesis.onvoiceschanged = PopulateVoices;
-    }
+        if (txtInput5) {
+            txtInput5.addEventListener('mouseover', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput5.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
 
-    txtInput1.addEventListener('mouseover', () => {
-        var toSpeak = new SpeechSynthesisUtterance(txtInput1.value);
-        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-        voices.forEach((voice) => {
-            if (voice.name === selectedVoiceName) {
-                toSpeak.voice = voice;
-            }
-        });
-        synth.speak(toSpeak);
-    });
+        function PopulateVoices() {
+            voices = synth.getVoices();
+            var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+            voiceList.innerHTML = '';
+            voices.forEach((voice) => {
+                var listItem = document.createElement('option');
+                listItem.textContent = voice.name;
+                listItem.setAttribute('data-lang', voice.lang);
+                listItem.setAttribute('data-name', voice.name);
+                voiceList.appendChild(listItem);
+            });
 
-    txtInput2.addEventListener('mouseover', () => {
-        var toSpeak = new SpeechSynthesisUtterance(txtInput2.value);
-        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-        voices.forEach((voice) => {
-            if (voice.name === selectedVoiceName) {
-                toSpeak.voice = voice;
-            }
-        });
-        synth.speak(toSpeak);
-    });
-    txtInput3.addEventListener('click', () => {
-        var toSpeak = new SpeechSynthesisUtterance(txtInput3.value);
-        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-        voices.forEach((voice) => {
-            if (voice.name === selectedVoiceName) {
-                toSpeak.voice = voice;
-            }
-        });
-        synth.speak(toSpeak);
-    });
-    txtInput4.addEventListener('click', () => {
-        var toSpeak = new SpeechSynthesisUtterance(txtInput4.value);
-        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-        voices.forEach((voice) => {
-            if (voice.name === selectedVoiceName) {
-                toSpeak.voice = voice;
-            }
-        });
-        synth.speak(toSpeak);
-    });
-    txtInput5.addEventListener('mouseover', () => {
-        var toSpeak = new SpeechSynthesisUtterance(txtInput5.value);
-        var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
-        voices.forEach((voice) => {
-            if (voice.name === selectedVoiceName) {
-                toSpeak.voice = voice;
-            }
-        });
-        synth.speak(toSpeak);
-    });
-
-    function PopulateVoices() {
-        voices = synth.getVoices();
-        var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
-        voiceList.innerHTML = '';
-        voices.forEach((voice) => {
-            var listItem = document.createElement('option');
-            listItem.textContent = voice.name;
-            listItem.setAttribute('data-lang', voice.lang);
-            listItem.setAttribute('data-name', voice.name);
-            voiceList.appendChild(listItem);
-        });
-
-        voiceList.selectedIndex = selectedIndex;
-    }
-</script>
+            voiceList.selectedIndex = selectedIndex;
+        }
+    </script>
 </body>
 
 </html>

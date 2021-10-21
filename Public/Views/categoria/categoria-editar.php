@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-    <title>Editar Usuario</title>
+    <title>Editar Categoria</title>
     <meta content="Responsive admin theme build on top of Bootstrap 4" name="description" />
     <meta content="Themesdesign" name="author" />
     <link rel="shortcut icon" href="Public/Assets/images/icono.png">
@@ -35,7 +35,7 @@
 
 
 
-<form id="frm-proveedor" action="?c=admin&a=Editar" method="post" enctype="multipart/form-data">
+<form id="frm-proveedor" action="?c=categoria&a=Editar" method="post" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?php echo $pvd->id; ?>" />
 
     <div class="form-group">
@@ -43,46 +43,6 @@
         <input required type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
     </div>
 
-    <div class="form-group">
-        <label>Tipo Documento</label>
-        <input required type="text" name="id_tipodocumento" value="<?php echo $pvd->id_tipodocumento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
-    </div>
-
-    <div class="form-group">
-        <label>Numero Documento</label>
-        <input required type="text" name="numero_documento" readonly value="<?php echo $pvd->numero_documento; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
-    </div>
-
-    <div class="form-group">
-        <label>Teléfono</label>
-        <input required type="text" name="telefono" value="<?php echo $pvd->telefono; ?>" class="form-control"  data-validacion-tipo="requerido|min:10" />
-    </div>
-
-    <div class="form-group">
-        <label>Correo</label>
-        <input required type="text" name="correo" readonly value="<?php echo $pvd->correo; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
-    </div>
-
-    <div class="form-group">
-        <label>Clave</label>
-        <input required type="text" name="pass" value="<?php echo $pvd->pass; ?>" class="form-control" data-validacion-tipo="requerido|min:100" />
-    </div>
-
-    <div class="form-group">
-        <label>Rol</label>
-    
-        <select name="tipo_rol" class="form-select form-control" readonly  value="<?php echo $pvd->tipo_rol; ?>">
-            <option value="Administrador">Administrador</option>
-            <option value="Cliente Interno">Cliente Interno</option>
-            <option value="Cliente Externo">Cliente Externo</option>
-            
-        </select>
-    </div>
-
-    <div class="form-group">
-        <label>Estado</label>
-        <input required type="text" name="estado" value="<?php echo $pvd->estado; ?>" class="form-control"  data-validacion-tipo="requerido|min:100" />
-    </div>
 
     <div class="form-group">
          <div>
