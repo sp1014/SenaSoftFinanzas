@@ -26,7 +26,7 @@ const signIn = async () => {
             formLogin.reset();
         } else {
             if (msg === 'ok') {
-                window.location.href = `${base_url}`;
+                window.location.href = `${base_url}?c=dashboard&a=index`;
             }
         }
     } catch (error) {
