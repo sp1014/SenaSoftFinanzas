@@ -164,8 +164,6 @@
             </div>
         </div>
 
-       
-
         <div class="col-xl-6">
             <div class="card m-b-30">
                 <div class="card-body">
@@ -323,7 +321,7 @@
     <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
     <script src="Public/Assets/js/waves.min.js" defer></script>
 
-   
+
 
 
     <!-- App js -->

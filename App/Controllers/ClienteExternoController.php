@@ -70,7 +70,6 @@ class ClienteExternoController
         $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
         $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
         $arrDir =  getDirectory('repository');
-        print_r($arrDir);
         if (!empty($arrDir)) {
             foreach ($arrDir as $file) {
                 $text = strtolower(parserPdf($file));
@@ -145,9 +144,6 @@ class ClienteExternoController
                 } else {
                     $image = strtolower(parserImage($file));
                     $arrTextImage = explode(' ', $image);
-                    // echo $arrTextImage[3];
-                    // var_dump((trim($arrTextImage[2]) == trim('colombia identificaciÓn')));
-                    // die();
                     format($arrTextImage);
                     foreach ($arrTextImage as $text) {
                         foreach ($keyWordTipoDocumento as $tipoDoc) {
