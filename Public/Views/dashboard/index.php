@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title><?= $data['tittle'] ?></title>
+    <link rel="shortcut icon" href="Public/Assets/images/Icono.png" type="image/x-icon">
     <link href="Public/Assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="Public/Assets/css/metismenu.min.css" rel="stylesheet" type="text/css">
     <link href="Public/Assets/css/icons.css" rel="stylesheet" type="text/css">
@@ -12,7 +13,7 @@
 
 <body>
     <?php
-    require_once('Views/vector/header.php');
+    require_once('Public/Views/vector/header.php');
     ?>
     <div class="row">
         <div class="col-sm-6 col-xl-3">
