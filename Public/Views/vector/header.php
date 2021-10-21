@@ -55,47 +55,51 @@
 
     <!-- ========== Left Sidebar Start ========== -->
     <div class="left side-menu">
-        
-            <!--- Sidemenu -->
-            <div id="sidebar-menu">
-                <!-- Left Menu Start -->
-                <ul class="metismenu" id="side-menu">
-                    <li class="menu-title">Menu</li>
-                    <li>
-                        <a href="<?= URL ?>?c=dashboard&a=index" class="waves-effect">
-                            <i class="fas fa-home"></i><span>Inicio</span>
-                        </a>
-                    </li>
+
+        <!--- Sidemenu -->
+        <div id="sidebar-menu">
+            <!-- Left Menu Start -->
+            <ul class="metismenu" id="side-menu">
+                <li class="menu-title">Menu</li>
+                <li>
+                    <a href="<?= URL ?>?c=dashboard&a=index" class="waves-effect">
+                        <i class="fas fa-home"></i><span>Inicio</span>
+                    </a>
+                </li>
+                <?php if ($_SESSION['sessionLogin']['tipo_rol'] == 'Cliente Externo') { ?>
                     <li>
                         <a href="<?= URL ?>?c=clienteexterno&a=index" class="waves-effect">
                             <i class="fas fa-file-import"></i><span>Subir archivo</span>
                         </a>
                     </li>
+                <?php } ?>
+                <?php if ($_SESSION['sessionLogin']['tipo_rol'] == 'Cliente Interno' || $_SESSION['sessionLogin']['tipo_rol'] == 'Administrador') { ?>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?= URL ?>?c=cliente&a=index" class="waves-effect">
                             <i class="fas fa-folder-open"></i><span>Consultar archivos</span>
                         </a>
                     </li>
+                <?php } ?>
+                <?php if ($_SESSION['sessionLogin']['tipo_rol'] == 'Cliente Interno' || $_SESSION['sessionLogin']['tipo_rol'] == 'Administrador') { ?>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?= URL ?>?c=categoria&a=Nuevo" class="waves-effect">
                             <i class="fas fa-plus"></i><span>Crear categorias</span>
                         </a>
                     </li>
+                <?php } ?>
+                <?php if ($_SESSION['sessionLogin']['tipo_rol'] == 'Administrador') { ?>
                     <li>
-                        <a href="index.html" class="waves-effect">
+                        <a href="<?= URL ?>?c=admin&a=Nuevo" class="waves-effect">
                             <i class="fas fa-user"></i><span>Registrar Usuario</span>
                         </a>
                     </li>
-                </ul>
-                </li>
-                </ul>
-            </div>
-            <!-- Sidebar -->
-            <div class="clearfix"></div>
-<<<<<<< HEAD
-=======
-        </>
->>>>>>> d8ae9630972885a03ea066dfe2d4616beae19eba
+                <?php } ?>
+            </ul>
+            </li>
+            </ul>
+        </div>
+        <!-- Sidebar -->
+        <div class="clearfix"></div>
         <!-- Sidebar -left -->
     </div>
     <!-- ============================================================== -->

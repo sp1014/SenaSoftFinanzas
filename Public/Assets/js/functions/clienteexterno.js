@@ -54,4 +54,7 @@ const insert = async () => {
 }
 
 document.addEventListener('DOMContentLoaded', loadCategories);
-formClienteExt.addEventListener('submit', validateForm)
+
+if (formClienteExt) {
+    formClienteExt.addEventListener('submit', validateForm);
+}
