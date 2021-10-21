@@ -19,41 +19,67 @@
     <?php
     require_once('Public/Views/vector/header.php');
     ?>
-    <!-- Begin page -->
-    <div class="accountbg">
-        <div class="wrapper-page">
-            <div class="card card-pages shadow-none">
-                <div class="card-body">
-                    <div class="text-center m-t-0 m-b-15">
-                        <a class="logo logo-admin"><img src="Public/Assets/images/Logo.png" height="60" width="240px"></a>
-                    </div>
-                    <h5 class="font-18 text-center">Registro de documentos</h5>
-                    <form class="form-horizontal m-t-30" enctype="multipart/form-data" id="form-clienteex">
-                        <div class="form-group">
-                            <div class="col-12">
-                                <label for="txtCategoria">Categoria</label>
-                                <select class="form-select form-control" id="txtCategoria" name="txtCategoria">
-                                </select>
-                            </div>
-                        </div>
 
-                        <div class="form-group">
-                            <div class="col-12">
-                                <label for="txtFile">Documento</label>
-                                <input class="form-control" type="file" id="txtFile" name="txtFile" accept="application/pdf">
-                            </div>
+    <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <div class="container-fluid">
+                        <div class="page-title-box">
+                            <div class="row align-items-center">
+                                <div class="col-sm-6">
+                                    <h4 class="page-title"></h4>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-right">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Inicio</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Subir</a></li>
+                                    </ol>
+                                </div>
+                            </div> <!-- end row -->
                         </div>
+                        <!-- end page-title -->
 
-                        <div class="form-group text-center m-t-20">
-                            <div class="col-12">
-                                <button class="btn btn-primary btn-block btn-lg waves-effect waves-light" type="submit">Registrar <i class="far fa-save"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div class="row  d-flex justify-content-center">
+                            <div class="col-lg-6">
+                                <div class="card m-b-30">
+                                    <div class="card-body">
+        
+                                    <div class="col-sm-9 ">
+                                    <h4 class="page-title">Registrar Documento</h4>
+                                     </div>
+                                     <span>-</span>
+                                        <form  enctype="multipart/form-data" id="form-clienteex">
+                                            <div class="form-group">
+                                                <label for="txtCategoria">Categoria</label>
+                                                <select class="form-control" id="txtCategoria" name="txtCategoria" required>
+                                                 </select>
+                                            </div>
+        
+                                           
+                                            <div class="form-group">
+                                            <label for="txtFile">Documento</label>
+                                                <div>
+                                                    <input class="form-control-file" type="file" id="txtFile" name="txtFile" accept="application/pdf" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <div>
+                                                    <button type="submit" class="btn btn-primary waves-effect waves-light">
+                                                        Enviar
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+        
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+
+
+
+                            
+
     <!-- END wrapper -->
     <?php
     require_once('Public/Views/vector/footer.php');
@@ -71,6 +97,12 @@
     <!-- App js -->
     <script src="Public/Assets/js/app.js" defer></script>
     <script src="Public/Assets/js/functions/clienteexterno.js" defer></script>
+
+    <script defer>
+        $(document).ready(function() {
+            $('form').parsley();
+        });
+    </script>
 </body>
 
 </html>
