@@ -5,9 +5,9 @@ require_once 'vendor/autoload.php';
 
 /**
  * Función para subir las fotos al servidor.
- * @return boolean true si se ha movido correctamente la imagen a la carpeta al servidor.
- * @param array $foto Arreglo con las especificaciones de la imagen.
- * @param string $nameFoto Nombre con el que se va a guardar la imagen.
+ * @return boolean true si se ha movido correctamente la el archivos a la carpeta en el servidor.
+ * @param array $foto Arreglo con las especificaciones del archivo que se va almacenar.
+ * @param string $nameFoto Nombre con el que se va a guardar el archivo.
  * @param string $categoria Id de la categoria con la que esta asociada el archivo que el usuario subio.
  * @author Edier Heraldo Hernandez Molano
  */
@@ -63,32 +63,9 @@ function parserImage(string $nombre_documento)
 
     $imagenes = $documento->getObjectsByType('XObject', 'Image');
     foreach ($imagenes as $imagen) {
-        $lengthImage =  printf("<img name=\"image\" id=\"image\" src=\"data:image/jpg;base64,%s\"/>", base64_encode($imagen->getContent()));
-    }
-
-    if ($lengthImage > 0) {
-        $path = getcwd();
-        $file_name = pathinfo("$path/repository/$nombre_documento", PATHINFO_FILENAME);
-        $move_file = move_uploaded_file($path, "images/" . $file_name);
-        shell_exec('"C:\\Program Files\\Tesseract-OCR\\tesseract" "C:\\xampp\\htdocs\SenaSoftFinanzas\\repository\\' . $file_name . '" out');
-
-        echo "<br><h3>OCR after reading</h3><br><pre>";
-
-        $myfile = fopen("out.txt", "r") or die("Unable to open file!");
-        $information = fread($myfile, filesize("out.txt"));
-        $keyWords = ['tarjeta', 'identidad', 'identificación', 'documento'];
-        echo $information . '<br/>';
-        $arrInfo = explode(' ', $information);
-        foreach ($arrInfo as $info) {
-            foreach ($keyWords as $words) {
-                if ($info == $words) {
-                    echo "Se ha encontrado una concordancia, las palabras: " . $info;
-                }
-            }
-        }
-        print_r($arrInfo);
-        fclose($myfile);
-        echo "</pre>";
+        $rutaImg = "data:image/jpg;base64," . base64_encode($imagen->getContent());
+        $img =  "<img src='$rutaImg' />";
+        // $lengthImage =  printf("<img name=\"image\" id=\"image\" src=\"data:image/jpg;base64,%s\"/>", base64_encode($imagen->getContent()));
     }
 }
 
@@ -121,5 +98,55 @@ function getDirectory($ruta)
         // Cierra el gestor de directorios
         closedir($gestor);
         return $arrInfoDir;
+    }
+}
+
+/**
+ * Función que sirve para leer una imagen y extraer el texto que tiene.
+ * @param string $file_name nombre del archivo (imagen) del cual se quiere leer el contenido.
+ */
+function imageToText()
+{
+    $file_name = 'factura.png';
+    $file_tmp = 'repository/';
+    move_uploaded_file($file_tmp, "images/" . $file_name);
+
+    shell_exec('"C:\\Program Files\\Tesseract-OCR\\tesseract" "C:\\xampp\\htdocs\\SenaSoftFinanzas\\repository\\images\\' . $file_name . '" out');
+
+    echo "<br><h3>OCR after reading</h3><br><pre>";
+
+    $myfile = fopen("out.txt", "r") or die("Unable to open file!");
+    $information = fread($myfile, filesize("out.txt"));
+    $keyWords = ['tarjeta', 'identidad', 'identificación', 'documento'];
+    echo $information . '<br/>';
+    $arrInfo = explode(' ', $information);
+    foreach ($arrInfo as $info) {
+        foreach ($keyWords as $words) {
+            if ($info == $words) {
+                echo "Se ha encontrado una concordancia, las palabras: " . $info;
+            }
+        }
+    }
+    print_r($arrInfo);
+    fclose($myfile);
+    echo "</pre>";
+}
+
+function imageToText2()
+{
+    $imagen = $_FILES["imagen"];
+    $ubicacionImagen = $imagen["tmp_name"];
+    echo '<br/><br/>' . $ubicacionImagen . '<br/><br/>';
+    $comando = "tesseract " . escapeshellarg($ubicacionImagen) . " stdout -l spa -c debug_file=/dev/null";
+    exec($comando, $textoDetectado, $codigoSalida);
+    if ($codigoSalida === 0) {
+        echo "El texto detectado es: ";
+        // Tenemos el texto como un array, podemos unirlo
+        $textoComoCadena = join("\n", $textoDetectado);
+        echo "<pre>";
+        echo $textoComoCadena;
+        echo "</pre>";
+    } else {
+        echo "Error detectando texto. Por favor verifique que la imagen existe y que el programa de detección está instalado y es accesible desde PHP. El código de salida es: " . $codigoSalida;
     }
 }

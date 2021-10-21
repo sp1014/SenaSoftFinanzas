@@ -72,10 +72,95 @@ class ClienteExternoController
             foreach ($arrDir as $file) {
                 $text = parserPdf($file);
                 if (!empty($text)) {
-                    echo '<br /><br />' . $text . '<br/><br />';
+                    $arrText = explode(' ', $text);
+                    $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula'];
+                    $keyWordFactura = ['factura', 'número de factura', 'Factura'];
+                    $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
+
+                    foreach ($arrText as $text) {
+                        $text = strtolower($text);
+                        foreach ($keyWordTipoDocumento as $tipoDoc) {
+                            $tipoDoc = strtolower($tipoDoc);
+                            if ($text == $tipoDoc) {
+                                echo "Encontro alguna concordancia con: " . $tipoDoc;
+                                $r = true;
+                                $destino = 'repository/Tipos_documento';
+                                if (!file_exists($destino)) {
+                                    mkdir($destino, 0777, true);
+                                }
+                                $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
+                                $path = trim(getcwd() . '\repository\ ') . $file;
+                                if (file_exists($path)) {
+                                    if (copy($path, $destino) && unlink($path)) {
+                                        echo '<br>';
+                                        echo "<b>El archivo ha sido movido y eliminado. Tipos de documento</b>";
+                                        echo '<br />';
+                                    }
+                                }
+                            } else {
+                                $r = false;
+                            }
+                        }
+                    }
+                    if ($r == false) {
+                        foreach ($arrText as $text) {
+                            $text = strtolower($text);
+                            echo $text;
+                            exit();
+                            foreach ($keyWordFactura as $factura) {
+                                $factura = strtolower($factura);
+                                if ($text == $factura) {
+                                    echo "Encontro alguna concordancia con: " . $factura;
+                                    $r = true;
+                                    $destino = 'repository/Facturas';
+                                    if (!file_exists($destino)) {
+                                        mkdir($destino, 0777, true);
+                                    }
+                                    $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
+                                    $path = trim(getcwd() . '\repository\ ') . $file;
+                                    if (file_exists($path)) {
+                                        if (copy($path, $destino) && unlink($path)) {
+                                            echo '<br>';
+                                            echo "<b>El archivo ha sido movido y eliminado. Facturas</b>";
+                                            echo '<br />';
+                                        }
+                                    }
+                                } else {
+                                    $r = false;
+                                }
+                            }
+                        }
+                    }
+                    if ($r == false) {
+                        foreach ($arrText as $text) {
+                            $text = strtolower($text);
+                            foreach ($keyWordCuentaCobro as $cuentaC) {
+                                $cuentaC = strtolower($cuentaC);
+                                if ($text == $cuentaC) {
+                                    echo "Encontro alguna concordancia con: " . $cuentaC;
+                                    $r = true;
+                                    $destino = 'repository/Cuentas_cobro';
+                                    if (!file_exists($destino)) {
+                                        mkdir($destino, 0777, true);
+                                    }
+                                    $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
+                                    $path = trim(getcwd() . '\repository\ ') . $file;
+                                    if (file_exists($path)) {
+                                        if (copy($path, $destino) && unlink($path)) {
+                                            echo '<br>';
+                                            echo "<b>El archivo ha sido movido y eliminado. Cuentas de cobro.</b>";
+                                            echo '<br />';
+                                        }
+                                    }
+                                } else {
+                                    $r = false;
+                                }
+                            }
+                        }
+                    }
                 } else {
-                    $textImg = parserImage($file);
-                    echo '<br /><br />' . $textImg . '<br/><br />';
+                    // $textImg = imageToText2();
+                    // echo '<br /><br />' . $textImg . '<br/><br />';
                 }
             }
         }
@@ -83,6 +168,6 @@ class ClienteExternoController
 
     public function parserImage()
     {
-        $image = parserImage('documento_identidad');
+        $image = parserImage('documento_identidad.pdf');
     }
 }
