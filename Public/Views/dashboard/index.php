@@ -63,7 +63,7 @@
                     </div>
                     <h3 class="mt-4">1</h3>
                     <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <span class="float-right">100%</span>
                 </div>
@@ -77,13 +77,13 @@
                         <i class="mdi mdi-buffer bg-danger text-white"></i>
                     </div>
                     <div>
-                        <h5 class="font-16">Add to Card</h5>
+                        <h5 class="font-16">Categorias nuevas</h5>
                     </div>
-                    <h3 class="mt-4">86%</h3>
+                    <h3 class="mt-4">1  </h3>
                     <div class="progress mt-4" style="height: 4px;">
-                        <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
-                    <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p>
+                   <span class="float-right">82%</span>
                 </div>
             </div>
         </div>
@@ -107,8 +107,8 @@
                                 </div>
 
                                 <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Ralph Ramirez</h5>
-                                    <p class="text-muted">3 Friend suggest</p>
+                                    <h5 class="font-14 mb-1 pt-2 text-dark">Edier Hernandez</h5>
+                                    <p class="text-muted">Tel:3134587765</p>
                                 </div>
                             </div>
                         </a>
@@ -123,8 +123,8 @@
                                 </div>
 
                                 <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Patrick Beeler</h5>
-                                    <p class="text-muted">17 Friend suggest</p>
+                                    <h5 class="font-14 mb-1 pt-2 text-dark">Edwar Pérez</h5>
+                                    <p class="text-muted">Tel:3561783452</p>
                                 </div>
                             </div>
                         </a>
@@ -139,8 +139,8 @@
                                 </div>
 
                                 <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Victor Zamora</h5>
-                                    <p class="text-muted">12 Friend suggest</p>
+                                    <h5 class="font-14 mb-1 pt-2 text-dark">Sergio Vargas</h5>
+                                    <p class="text-muted">Tel:3423567892</p>
                                 </div>
                             </div>
                         </a>
@@ -154,8 +154,8 @@
                                     <i class="mdi mdi-plus"></i>
                                 </div>
                                 <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Bryan Lacy</h5>
-                                    <p class="text-muted">18 Friend suggest</p>
+                                    <h5 class="font-14 mb-1 pt-2 text-dark">Pepe Perez</h5>
+                                    <p class="text-muted">Tel:3872138794</p>
                                 </div>
                             </div>
                         </a>
@@ -163,8 +163,6 @@
                 </div>
             </div>
         </div>
-
-       
 
         <div class="col-xl-6">
             <div class="card m-b-30">
@@ -323,7 +321,7 @@
     <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
     <script src="Public/Assets/js/waves.min.js" defer></script>
 
-   
+
 
 
     <!-- App js -->

@@ -25,12 +25,7 @@
                     </a>
                 </li>
 
-                <li class="dropdown notification-list list-inline-item d-none d-md-inline-block">
-                    <a class="nav-link waves-effect" href="#" id="btn-fullscreen">
-                        <i class="mdi mdi-microphone-outline noti-icon"></i>
-                    </a>
-                </li>
-
+                
                
                 <li class="dropdown notification-list list-inline-item">
                     <div class="dropdown notification-list nav-pro-img">

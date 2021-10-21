@@ -101,37 +101,6 @@ function getDirectory($ruta)
     }
 }
 
-/**
- * Función que sirve para leer una imagen y extraer el texto que tiene.
- * @param string $file_name nombre del archivo (imagen) del cual se quiere leer el contenido.
- */
-function imageToText()
-{
-    $file_name = 'factura.png';
-    $file_tmp = 'repository/';
-    move_uploaded_file($file_tmp, "images/" . $file_name);
-
-    shell_exec('"C:\\Program Files\\Tesseract-OCR\\tesseract" "C:\\xampp\\htdocs\\SenaSoftFinanzas\\repository\\images\\' . $file_name . '" out');
-
-    echo "<br><h3>OCR after reading</h3><br><pre>";
-
-    $myfile = fopen("out.txt", "r") or die("Unable to open file!");
-    $information = fread($myfile, filesize("out.txt"));
-    $keyWords = ['tarjeta', 'identidad', 'identificación', 'documento'];
-    echo $information . '<br/>';
-    $arrInfo = explode(' ', $information);
-    foreach ($arrInfo as $info) {
-        foreach ($keyWords as $words) {
-            if ($info == $words) {
-                echo "Se ha encontrado una concordancia, las palabras: " . $info;
-            }
-        }
-    }
-    print_r($arrInfo);
-    fclose($myfile);
-    echo "</pre>";
-}
-
 function imageToText2(string $img_base_64)
 {
     // Define the Base64 value you need to save as an image
