@@ -10,45 +10,50 @@ class CategoriaController
      * Método constructor que carga el archivo del modelo que va a estar asociado. 
      */
     public function __CONSTRUCT()
-    { $this->model = new categoria();
-        
+    {
+        session_start();
+        if (!isset($_SESSION['login'])) {
+            header('Location: ' . URL . '?c=Login&a=index');
+        }
+        $this->model = new categoria();
     }
     /**
      * Carga la vista de index
      */
     public function index()
     {
-        
+
         require_once('Public/Views/categoria/categoria.php');
     }
 
 
-    public function Crud(){
+    public function Crud()
+    {
         $pvd = new categoria();
 
         //Se obtienen los datos de los usuarios a editar.
-        if(isset($_REQUEST['id'])){
+        if (isset($_REQUEST['id'])) {
             $pvd = $this->model->Obtener($_REQUEST['id']);
         }
 
         //Llamado de las vistas.
-      
+
         require_once 'Public/Views/categoria/categoria-editar.php';
-      
-  }
+    }
 
     //Llamado a la vista admin-nuevo
-    public function Nuevo(){
+    public function Nuevo()
+    {
         $pvd = new categoria();
 
         //Llamado de las vistas.
-      
+
         require_once 'Public/Views/categoria/categoria-nuevo.php';
-      
     }
 
     //Método que registrar al modelo un nuevo usuario.
-    public function Guardar(){
+    public function Guardar()
+    {
         $pvd = new categoria();
 
         //Captura de los datos del formulario (vista).
@@ -68,7 +73,8 @@ class CategoriaController
     }
 
     //Método que modifica el modelo de un Usuario.
-    public function Editar(){
+    public function Editar()
+    {
         $pvd = new categoria();
 
         $pvd->id = $_REQUEST['id'];
@@ -87,7 +93,8 @@ class CategoriaController
     }
 
     //Método que elimina el Usuario con el id dado.
-    public function Eliminar(){
+    public function Eliminar()
+    {
         $this->model->Eliminar($_REQUEST['id']);
         header('Location: ?c=categoria&a=Nuevo.php');
     }
