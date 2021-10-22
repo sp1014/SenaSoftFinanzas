@@ -22,9 +22,18 @@
 
                     <form id="frm-admin" action="?c=admin&a=Guardar" method="post" enctype="multipart/form-data">
 
+                    <div class="form-group">
+                   <label> Seleccione la Voz:</label> 
+                   <select  id='voiceList' class="form-control"> 
+                    </div>
+
+                        <div class="form-group">
+                            <label> Seleccione la Voz:</label>
+                            <select id='voiceList' class="form-control">
+                        </div>
                         <div class="form-group">
                             <label>Nombre</label>
-                            <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" required />
+                            <input type="text" id="nombre" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" required />
                         </div>
 
                         <div class="form-group">
@@ -36,12 +45,12 @@
 
                         <div class="form-group">
                             <label>Numero Documento</label>
-                            <input type="text" name="numero_documento" data-parsley-type="number" value="<?php echo $pvd->numero_documento; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
+                            <input type="text" id="numero_documento" name="numero_documento" data-parsley-type="number" value="<?php echo $pvd->numero_documento; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
                         </div>
 
                         <div class="form-group">
                             <label>Teléfono</label>
-                            <input type="text" name="telefono" data-parsley-type="number" value="<?php echo $pvd->telefono; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
+                            <input type="text" id="telefono" name="telefono" data-parsley-type="number" value="<?php echo $pvd->telefono; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
                         </div>
 
                         <div class="form-group">
@@ -103,4 +112,92 @@
                 $('form').parsley();
             });
         </script>
+
+
+
+<script>
+        var txtInput1 = document.querySelector('#nombre');
+
+        var txtInput3 = document.querySelector('#numero_documento');
+        
+        var txtInput4 = document.querySelector('#telefono');
+
+        var txtInput5 = document.querySelector('#myList');
+
+
+        var voiceList = document.querySelector('#voiceList');
+        var synth = window.speechSynthesis;
+        var voices = [];
+
+        //PopulateVoices();
+        if (speechSynthesis !== undefined) {
+            speechSynthesis.onvoiceschanged = PopulateVoices;
+        }
+        if (txtInput1) {
+            txtInput1.addEventListener('mouseover', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput1.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
+
+        if (txtInput3) {
+            txtInput3.addEventListener('click', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput3.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
+
+        if (txtInput4) {
+            txtInput4.addEventListener('click', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput4.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
+
+        if (txtInput5) {
+            txtInput5.addEventListener('mouseover', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput5.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
+
+        function PopulateVoices() {
+            voices = synth.getVoices();
+            var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+            voiceList.innerHTML = '';
+            voices.forEach((voice) => {
+                var listItem = document.createElement('option');
+                listItem.textContent = voice.name;
+                listItem.setAttribute('data-lang', voice.lang);
+                listItem.setAttribute('data-name', voice.name);
+                voiceList.appendChild(listItem);
+            });
+
+            voiceList.selectedIndex = selectedIndex;
+        }
+    </script>
 </body>
