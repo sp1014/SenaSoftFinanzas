@@ -116,11 +116,8 @@
 
 <script>
         var txtInput1 = document.querySelector('#nombre');
-
         var txtInput3 = document.querySelector('#numero_documento');
-        
         var txtInput4 = document.querySelector('#telefono');
-
         var txtInput5 = document.querySelector('#correo');
 
 
