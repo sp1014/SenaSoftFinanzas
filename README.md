@@ -36,7 +36,7 @@ https://getcomposer.org
 Instalacion de algunas librerias 
 ```
 
-## Colaboladores 🖇️
+## Colaboradores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
 
