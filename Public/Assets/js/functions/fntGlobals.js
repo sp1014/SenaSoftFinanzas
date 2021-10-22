@@ -3,7 +3,18 @@ const reviewRepositoryFiles = async () => {
     try {
         const req = await fetch(url);
         const data = await req.json();
-        console.log(data);
+        console.log(data[0]);
+        // if (status && msg !== '') {
+        //     msg.forEach(item => console.log(item));
+        //     return;
+        //     Swal.fire({
+        //         position: 'top-end',
+        //         icon: 'success',
+        //         title: msg,
+        //         showConfirmButton: false,
+        //         timer: 1500
+        //     })
+        // }
     } catch (error) {
         console.error(error);
     }

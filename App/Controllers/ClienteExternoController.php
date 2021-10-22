@@ -83,6 +83,7 @@ class ClienteExternoController
 
     public function parser()
     {
+        $response = [];
         $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula', 'repÚblica'];
         $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
         $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
@@ -105,7 +106,7 @@ class ClienteExternoController
                                 $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
                                 $path = trim(getcwd() . '\repository\ ') . $file;
                                 if (file_exists($path)) {
-                                    $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                    $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Tipo_documento. Además que esta en formato texto"];
                                     copy($path, $destino);
                                     unlink($path);
                                 }
@@ -127,7 +128,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Factura. Además que esta en formato texto"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -150,7 +151,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Cuenta_cobro. Además que esta en formato texto"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -178,7 +179,7 @@ class ClienteExternoController
                                 $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
                                 $path = trim(getcwd() . '\repository\ ') . $file;
                                 if (file_exists($path)) {
-                                    $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                    $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Tipo_documento. Además que esta en formato gráfico"];
                                     copy($path, $destino);
                                     unlink($path);
                                 }
@@ -203,7 +204,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Factura. Además que esta en formato gráfico"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -228,7 +229,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
-                                        $arrResp = ['status' => true, 'msg' => 'Archivo guardado en el directorio Tipo_documento. Además que esta en formato texto'];
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Cuenta_cobro. Además que esta en formato gráfico"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -239,10 +240,13 @@ class ClienteExternoController
                         }
                     }
                 }
+                array_push($response, $arrResp);
             }
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
         } else {
             $arrResp = ['status' => true, 'msg' => 'Respositorio vació. Todos los archivos han sido movidos a sus respectivos directorios !!'];
+            array_push($response, $arrResp);
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
         }
-        echo json_encode($arrResp, JSON_UNESCAPED_UNICODE);
     }
 }
