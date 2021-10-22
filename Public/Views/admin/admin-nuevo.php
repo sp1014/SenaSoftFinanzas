@@ -55,7 +55,7 @@
 
                         <div class="form-group">
                             <label>Correo</label>
-                            <input type="text" name="correo" value="<?php echo $pvd->correo; ?>" data-parsley-type="email" class="form-control" data-validacion-tipo="requerido|min:10" />
+                            <input type="text" id="correo" name="correo" value="<?php echo $pvd->correo; ?>" data-parsley-type="email" class="form-control" data-validacion-tipo="requerido|min:10" />
                         </div>
 
                         <div class="form-group">
@@ -122,7 +122,7 @@
         
         var txtInput4 = document.querySelector('#telefono');
 
-        var txtInput5 = document.querySelector('#myList');
+        var txtInput5 = document.querySelector('#correo');
 
 
         var voiceList = document.querySelector('#voiceList');
