@@ -1,6 +1,9 @@
 <img src="Public/Assets/images/Logo.png" alt="FinancialFast"/>
 
-_Proyecto enfocado al mundo financiero__
+_Financial Fast es una solución tecnológica completa enfocada en el manejo, manipulación y ordenamiento de archivos PDFs dentro del sector financiero; además que integra la funcionalidad de que los clientes externos puedan subir los archivos e interactuar con el sistema.
+Dicha solución contempla un modelo de reconocimiento de texto e imágenes dentro de los archivos con extensión PDF, de esa forma puede extraer el texto y compararlo con unas palabras claves que hay por cada categoría, y cuando encuentra alguna coincidencia guarda el archivo dentro de esa carpeta.
+La solución además permitirá reducir el tiempo de los trabajadores, dado que el sistema va a organizar de forma automática dichos archivos dentro de carpetas, el algoritmo está programado para realizarlo en un tiempo de menos de 5 segundos. De igual manera los trabajadores van a poder consultarlos y visualizarlos.
+__
 
 ## Comenzando 🚀
 
