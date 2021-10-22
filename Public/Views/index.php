@@ -147,7 +147,7 @@
             <div class="icon-box">
               <div class="icon"><i class="fas fa-desktop"></i></div>
               <h4 class="title"><a href="">Facilidad de usar el sitema</a></h4>
-              <p class="description">El sistema proporcionara un ambiente web agradable para el susuario mediante iconos, <br>
+              <p class="description">El sistema proporcionara un ambiente web agradable para el usuario mediante iconos, <br>
                 colores adecuados,informaci{on adecuada , lo cual permitirá que el usuario navegue con facilidad.</p>
             </div>
 
