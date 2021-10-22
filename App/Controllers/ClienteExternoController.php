@@ -83,6 +83,7 @@ class ClienteExternoController
 
     public function parser()
     {
+        $response = [];
         $keyWordTipoDocumento = ['identificación', 'identidad', 'cédula', 'repÚblica'];
         $keyWordFactura = ['factura', 'número de factura', 'factura:', 'referencia'];
         $keyWordCuentaCobro = ['cuenta', 'cobro', 'cuenta cobro', 'cuenta de cobro'];
@@ -92,12 +93,11 @@ class ClienteExternoController
                 $text = strtolower(parserPdf($file));
                 if (!empty($text)) {
                     $arrText = explode(' ', $text);
-
                     foreach ($arrText as $text) {
                         foreach ($keyWordTipoDocumento as $tipoDoc) {
                             $tipoDoc = trim($tipoDoc);
                             if ($text == $tipoDoc) {
-                                echo "Encontro alguna concordancia con: " . $tipoDoc;
+                                // echo "Encontro alguna concordancia con: " . $tipoDoc;
                                 $r = true;
                                 $destino = 'repository/Tipos_documento';
                                 if (!file_exists($destino)) {
@@ -106,6 +106,7 @@ class ClienteExternoController
                                 $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
                                 $path = trim(getcwd() . '\repository\ ') . $file;
                                 if (file_exists($path)) {
+                                    $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Tipo_documento. Además que esta en formato texto"];
                                     copy($path, $destino);
                                     unlink($path);
                                 }
@@ -118,7 +119,7 @@ class ClienteExternoController
                         foreach ($arrText as $text) {
                             foreach ($keyWordFactura as $factura) {
                                 if ($text == $factura) {
-                                    echo "Encontro alguna concordancia con: " . $factura;
+                                    // echo "Encontro alguna concordancia con: " . $factura;
                                     $r = true;
                                     $destino = 'repository/Facturas';
                                     if (!file_exists($destino)) {
@@ -127,6 +128,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Factura. Además que esta en formato texto"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -140,7 +142,7 @@ class ClienteExternoController
                         foreach ($arrText as $text) {
                             foreach ($keyWordCuentaCobro as $cuentaC) {
                                 if ($text == $cuentaC) {
-                                    echo "Encontro alguna concordancia con: " . $cuentaC;
+                                    // echo "Encontro alguna concordancia con: " . $cuentaC;
                                     $r = true;
                                     $destino = 'repository/Cuentas_cobro';
                                     if (!file_exists($destino)) {
@@ -149,6 +151,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Cuenta_cobro. Además que esta en formato texto"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -161,13 +164,13 @@ class ClienteExternoController
                 } else {
                     $image = strtolower(parserImage($file));
                     $arrTextImage = explode(' ', $image);
-                    format($arrTextImage);
+                    // format($arrTextImage);
                     foreach ($arrTextImage as $text) {
                         foreach ($keyWordTipoDocumento as $tipoDoc) {
                             // echo $text . '<br>';
                             // echo  '<b>' . $tipoDoc . '</b><br>';
                             if ($text == $tipoDoc) {
-                                echo "Encontro alguna concordancia con: " . $tipoDoc;
+                                // echo "Encontro alguna concordancia con: " . $tipoDoc;
                                 $r = true;
                                 $destino = 'repository/Tipos_documento';
                                 if (!file_exists($destino)) {
@@ -176,6 +179,7 @@ class ClienteExternoController
                                 $destino = trim(getcwd() . '\repository\Tipos_documento\ ') . $file;
                                 $path = trim(getcwd() . '\repository\ ') . $file;
                                 if (file_exists($path)) {
+                                    $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Tipo_documento. Además que esta en formato gráfico"];
                                     copy($path, $destino);
                                     unlink($path);
                                 }
@@ -191,7 +195,7 @@ class ClienteExternoController
                                 // echo $text . '<br>';
                                 // echo '<b>' . $factura . '</b><br>';
                                 if ($text == $factura) {
-                                    echo "Encontro alguna concordancia con: " . $factura;
+                                    // echo "Encontro alguna concordancia con: " . $factura;
                                     $r = true;
                                     $destino = 'repository/Facturas';
                                     if (!file_exists($destino)) {
@@ -200,6 +204,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Facturas\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Factura. Además que esta en formato gráfico"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -215,7 +220,7 @@ class ClienteExternoController
                                 // echo $text . '<br>';
                                 // echo '<b>' . $cuentaC . '<b/><br>';
                                 if ($text == $cuentaC) {
-                                    echo "Encontro alguna concordancia con: " . $cuentaC;
+                                    // echo "Encontro alguna concordancia con: " . $cuentaC;
                                     $r = true;
                                     $destino = 'repository/Cuentas_cobro';
                                     if (!file_exists($destino)) {
@@ -224,6 +229,7 @@ class ClienteExternoController
                                     $destino = trim(getcwd() . '\repository\Cuentas_cobro\ ') . $file;
                                     $path = trim(getcwd() . '\repository\ ') . $file;
                                     if (file_exists($path)) {
+                                        $arrResp = ['status' => true, 'msg' => "El archivo $file ha sigo guardado en el directorio Cuenta_cobro. Además que esta en formato gráfico"];
                                         copy($path, $destino);
                                         unlink($path);
                                     }
@@ -234,10 +240,13 @@ class ClienteExternoController
                         }
                     }
                 }
+                array_push($response, $arrResp);
             }
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
         } else {
-            $arrResponse = ['status' => true, 'msg' => 'Todos los archivos han sido movidos a sus respectivos directorios !!'];
-            echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+            $arrResp = ['status' => true, 'msg' => 'Respositorio vació. Todos los archivos han sido movidos a sus respectivos directorios !!'];
+            array_push($response, $arrResp);
+            echo json_encode($response, JSON_UNESCAPED_UNICODE);
         }
     }
 }
