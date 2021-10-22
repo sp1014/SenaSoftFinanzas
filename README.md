@@ -14,15 +14,18 @@ Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
 #### XAMPP 💾
 ```
 https://www.apachefriends.org/es/download.html
+
 ```
 #### OCR 📂
 ```
 https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
+nos ayuda al reconocimiento de texto en imágenes
 ```
-#### PdfParser
+#### PDFPARSER 📲
 
 ```
 https://parzibyte.me/blog/2019/06/16/extraer-texto-imagenes-pdf-php/
+Realiza la extraccion de texto en images y pdf
 ```
 
 
