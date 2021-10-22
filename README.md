@@ -6,7 +6,7 @@ _Proyecto enfocado para el comercio en liena_
 
 ### Pre-requisitos 📋
 
-####Lenguajes
+#### Lenguajes
 
 ```
 Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
