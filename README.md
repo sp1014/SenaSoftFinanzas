@@ -9,7 +9,10 @@ _Proyecto enfocado para el comercio en liena_
 _None_
 
 ```
-Desarrollado en Visual Studio Code
+Desarrollado en PHP,MYSQL.JS.CSS.HTML
+```
+```
+XAMPP (https://www.apachefriends.org/es/download.html)
 ```
 
 ## Colaboladores 🖇️
