@@ -1,6 +1,7 @@
 const selectListCategories = document.getElementById('txtCategoria');
 const selectListDocumentType = document.getElementById('txtTipoDoc');
 const formClienteExt = document.querySelector('#form-clienteex');
+const formDatosPersonales = document.querySelector('#frm-admin');
 
 const loadCategories = async () => {
     const url = `${base_url}?c=clienteexterno&a=getCategorias`;
@@ -74,11 +75,40 @@ const insert = async () => {
     formClienteExt.reset();
 }
 
+const savePersonalData = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(formDatosPersonales);
+    const url = `${base_url}?c=admin&a=Guardar`;
+    try {
+        const req = await fetch(url, {
+            method: 'POST',
+            body: formData
+        });
+        const { status, msg } = await req.json();
+        if (status) {
+            Swal.fire('Registro exitoso', msg, 'success');
+            formDatosPersonales.reset();
+        } else {
+            Swal.fire('Error', msg, 'error');
+        }
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-    loadCategories();
-    loadDocumentType();
+    if (selectListCategories) {
+        loadCategories();
+    }
+    if (selectListDocumentType) {
+        loadDocumentType();
+    }
 });
 
 if (formClienteExt) {
     formClienteExt.addEventListener('submit', validateForm);
+}
+
+if (formDatosPersonales) {
+    formDatosPersonales.addEventListener('submit', savePersonalData);
 }

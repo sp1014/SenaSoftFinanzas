@@ -26,7 +26,6 @@ class AdminController
         require_once('Public/Views/admin/admin.php');
     }
 
-
     public function Crud()
     {
         $pvd = new admin();
@@ -53,7 +52,6 @@ class AdminController
         $pvd = new admin();
 
         //Captura de los datos del formulario (vista).
-        $pvd->id = $_REQUEST['id'];
         $pvd->nombre = $_REQUEST['nombre'];
         $pvd->id_tipodocumento = $_REQUEST['id_tipodocumento'];
         $pvd->numero_documento = $_REQUEST['numero_documento'];
@@ -63,9 +61,17 @@ class AdminController
         $pvd->tipo_rol = $_REQUEST['tipo_rol'];
         $pvd->estado = $_REQUEST['estado'];
         //Registro al modelo Usuarios.
-        $this->model->Registrar($pvd);
+        $request = $this->model->Registrar($pvd);
 
-        header('Location: ?c=admin&a=Nuevo.php');
+        if (intval($request) > 0) {
+            $arrResponse = ['status' => true, 'msg' => 'Usuario registrado exitosamente :)'];
+        } elseif ($request == 'exists') {
+            $arrResponse = ['status' => false, 'msg' => 'Ya existe un usuario con esos datos personales. Por favor registra uno nuevo.'];
+        } else {
+            $arrResponse = ['status' => false, 'msg' => 'Ha ocurrido un error en el servidor, por favor intenta más tarde'];
+        }
+        echo json_encode($arrResponse, JSON_UNESCAPED_UNICODE);
+        die();
     }
 
     //Método que modifica el modelo de un Usuario.

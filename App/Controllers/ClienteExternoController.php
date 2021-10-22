@@ -9,15 +9,15 @@ class ClienteExternoController
     {
         session_start();
         require_once('App/Models/ClienteExterno.php');
-        if (!isset($_SESSION['login'])) {
-            header('Location: ' . URL . '?c=Login&a=index');
-        }
     }
     /**
      * Carga la vista de index
      */
     public function index()
     {
+        if (!isset($_SESSION['login'])) {
+            header('Location: ' . URL . '?c=Login&a=index');
+        }
         $data['tittle'] = 'Cargar documentos | Finacialfast';
         require_once('Public/Views/clienteexterno/clienteexterno.php');
     }
