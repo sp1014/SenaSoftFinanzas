@@ -15,7 +15,7 @@ Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
 ```
 https://www.apachefriends.org/es/download.html
 ```
-#### OCR
+#### OCR 📂
 ```
 https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 ```
