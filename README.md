@@ -1,6 +1,6 @@
 <img src="Public/Assets/images/Logo.png" alt="FinancialFast"/>
 
-_Proyecto enfocado al mundo finaciero__
+_Proyecto enfocado al mundo financiero__
 
 ## Comenzando 🚀
 
