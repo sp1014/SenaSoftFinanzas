@@ -21,16 +21,17 @@
     <div class="card">
         <div class="card-heading p-4">
             <div class="mini-stat-icon float-right">
-                <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
+                <i class="fas fa-pencil-ruler bg-primary  text-white"></i>
+                
             </div>
             <div>
-                <h5 class="font-16">Active Sessions</h5>
+                <h5 class="font-17">Diseño</h5>
             </div>
-            <h3 class="mt-4">43,225</h3>
+            <h6 class="mt-4">El sistema fue diseñado para cumplir con las necesidades empresariales.</h6>
             <div class="progress mt-4" style="height: 4px;">
-                <div class="progress-bar bg-primary" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">75%</span></p>
+           <span class="float-right">100%</span>
         </div>
     </div>
 </div>
@@ -39,16 +40,17 @@
     <div class="card">
         <div class="card-heading p-4">
             <div class="mini-stat-icon float-right">
-                <i class="mdi mdi-briefcase-check bg-success text-white"></i>
+                <i class="fab fa-uncharted bg-success text-white"></i>
+                <i class="fab fa-uncharted"></i>
             </div>
             <div>
-                <h5 class="font-16">Total Revenue</h5>
+                <h5 class="font-17">Interfaz</h5>
             </div>
-            <h3 class="mt-4">$73,265</h3>
+            <h6 class="mt-4">El diseño del sistema fue desarrollado para tener una interfaz sencilla.</h6>
             <div class="progress mt-4" style="height: 4px;">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-success" role="progressbar" style="width:100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">88%</span></p>
+            <span class="float-right">100%</span>
         </div>
     </div>
 </div>
@@ -60,13 +62,13 @@
                 <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
             </div>
             <div>
-                <h5 class="font-16">Average Price</h5>
+                <h5 class="font-17">Fácil</h5>
             </div>
-            <h3 class="mt-4">447</h3>
+            <h6 class="mt-4">El sistema maneja una complejidad minima para el usuario.</h6>
             <div class="progress mt-4" style="height: 4px;">
-                <div class="progress-bar bg-warning" role="progressbar" style="width: 68%" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">68%</span></p>
+            <span class="float-right">100%</span>
         </div>
     </div>
 </div>
@@ -78,13 +80,13 @@
                 <i class="mdi mdi-buffer bg-danger text-white"></i>
             </div>
             <div>
-                <h5 class="font-16">Add to Card</h5>
+                <h5 class="font-17">Tiempo</h5>
             </div>
-            <h3 class="mt-4">86%</h3>
+            <h6 class="mt-4">El tiempo que maneja el sistema al hacer alguna consulta es lo mas reducido posible.</h6>
             <div class="progress mt-4" style="height: 4px;">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
             </div>
-            <p class="text-muted mt-2 mb-0">Previous period<span class="float-right">82%</span></p>
+            <span class="float-right">100%</span>
         </div>
     </div>
 </div>
