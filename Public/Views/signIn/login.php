@@ -70,6 +70,9 @@
     <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
     <!-- App js -->
     <script src="Public/Assets/js/app.js" defer></script>
+    <script>
+        const base_url = 'http://localhost/SenaSoftFinanzas/';
+    </script>
     <script src="Public/Assets/js/functions/signIn.js"></script>
 
     <script defer>
