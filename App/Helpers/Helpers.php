@@ -65,7 +65,7 @@ function parserImage(string $nombre_documento)
     foreach ($imagenes as $imagen) {
         // $rutaImg = "data:image/png;base64," . base64_encode($imagen->getContent());
         return imageToText2(base64_encode($imagen->getContent()));
-        // $lengthImage =  printf("<img name=\"image\" id=\"image\" src=\"data:image/jpg;base64,%s\"/>", base64_encode($imagen->getContent()));
+        // printf("<img name=\"image\" id=\"image\" src=\"data:image/jpg;base64,%s\"/>", base64_encode($imagen->getContent()));
     }
 }
 
