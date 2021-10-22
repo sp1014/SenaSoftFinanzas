@@ -1,6 +1,6 @@
 # FinancialFast
 
-_Proyecto enfocado para el comercio en liena_
+_Proyecto enfocado al mundo finaciero__
 
 ## Comenzando 🚀
 
