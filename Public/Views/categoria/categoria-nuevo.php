@@ -28,9 +28,18 @@
 
                                 <form id="frm-admin" action="?c=categoria&a=Guardar" method="post" enctype="multipart/form-data">
 
+                                <div class="form-group">
+                   <label> Seleccione la Voz:</label> 
+                   <select  id='voiceList' class="form-control"> 
+                    </div>
+
+                        <div class="form-group">
+                            <label> Seleccione la Voz:</label>
+                            <select id='voiceList' class="form-control">
+                        </div>
                                     <div class="form-group">
                                         <label>Nombre</label>
-                                        <input type="text" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" required />
+                                        <input type="text" id="nombre" name="nombre" value="<?php echo $pvd->nombre; ?>" class="form-control" required />
                                     </div>
 
                     
@@ -70,4 +79,50 @@
                             $('form').parsley();
                         });
                     </script>
+
+<script>
+        var txtInput1 = document.querySelector('#nombre');
+        var txtInput3 = document.querySelector('#numero_documento');
+        var txtInput4 = document.querySelector('#telefono');
+        var txtInput5 = document.querySelector('#correo');
+
+
+        var voiceList = document.querySelector('#voiceList');
+        var synth = window.speechSynthesis;
+        var voices = [];
+
+        //PopulateVoices();
+        if (speechSynthesis !== undefined) {
+            speechSynthesis.onvoiceschanged = PopulateVoices;
+        }
+        if (txtInput1) {
+            txtInput1.addEventListener('mouseover', () => {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput1.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if (voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                synth.speak(toSpeak);
+            });
+        }
+
+      
+
+        function PopulateVoices() {
+            voices = synth.getVoices();
+            var selectedIndex = voiceList.selectedIndex < 0 ? 0 : voiceList.selectedIndex;
+            voiceList.innerHTML = '';
+            voices.forEach((voice) => {
+                var listItem = document.createElement('option');
+                listItem.textContent = voice.name;
+                listItem.setAttribute('data-lang', voice.lang);
+                listItem.setAttribute('data-name', voice.name);
+                voiceList.appendChild(listItem);
+            });
+
+            voiceList.selectedIndex = selectedIndex;
+        }
+    </script>
 </body>

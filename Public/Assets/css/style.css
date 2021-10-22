@@ -61,14 +61,16 @@ body {
     overflow-x: hidden;
   }
 }
-
+.titulo{
+  text-align: center;
+}
 
 html {
   overflow-x: hidden;
   position: relative;
   min-height: 100%;
 }
-button-menu-mobile
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
