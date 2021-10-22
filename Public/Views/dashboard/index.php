@@ -203,6 +203,7 @@
 
     <?php
     require_once("Public/Views/Vector/footer.php");
+    require_once('Public/Views/components/scripts.php');
     ?>
     <!-- jQuery -->
     <script src="Public/Assets/js/jquery.min.js" defer></script>
@@ -210,10 +211,6 @@
     <script src="Public/Assets/js/metismenu.min.js" defer></script>
     <script src="Public/Assets/js/jquery.slimscroll.js" defer></script>
     <script src="Public/Assets/js/waves.min.js" defer></script>
-
-
-
-
     <!-- App js -->
     <script src="Public/Assets/js/app.js" defer></script>
 </body>
