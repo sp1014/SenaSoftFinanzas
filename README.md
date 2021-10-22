@@ -10,10 +10,12 @@ _Proyecto enfocado al mundo finaciero__
 
 ```
 Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
+nos facilita 
 ```
 #### XAMPP 💾
 ```
 https://www.apachefriends.org/es/download.html
+nos facilita la gestión de bases de datos MySQL, el servidor web Apache 
 
 ```
 #### OCR 📂
