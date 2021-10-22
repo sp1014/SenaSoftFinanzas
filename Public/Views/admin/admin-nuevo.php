@@ -35,7 +35,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Numero Docuemnto</label>
+                            <label>Numero Documento</label>
                             <input type="text" name="numero_documento" data-parsley-type="number" value="<?php echo $pvd->numero_documento; ?>" class="form-control" required data-validacion-tipo="requerido|min:10" />
                         </div>
 
