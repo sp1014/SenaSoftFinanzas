@@ -2,7 +2,7 @@ $('input[type="file"]').on('change', function() {
     var ext = $(this).val().split('.').pop();
     if ($(this).val() != '') {
         if (ext == "pdf") {
-            alert("La extensión es: " + ext);
+
             if ($(this)[0].files[0].size > 1048576) {
                 console.log("El documento excede el tamaño máximo");
                 $('#modal-title').text('¡Precaución!');
