@@ -21,10 +21,10 @@
                 <div class="card-body">
 
                     <form id="frm-admin" action="?c=admin&a=Guardar" method="post" enctype="multipart/form-data">
-
+                    <div class="form-row">
                     <div class="form-group col-md-6">
                    <label> Seleccione la Voz:</label> 
-                   <select  id='voiceList' class="form-control"> </select>
+                   <select  id='voiceList' class="form-control"></select>
                     </div>
 
                
@@ -76,13 +76,11 @@
                                 <option value="0">Inactivo</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
-                            <div>
-                                <button type="submit" class="btn btn-primary waves-effect waves-light">
+                        </div>
+                        <button type="submit" class="btn btn-primary waves-effect waves-light">
                                     Enviar
                                 </button>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
@@ -116,8 +114,11 @@
 
 <script>
         var txtInput1 = document.querySelector('#nombre');
+
         var txtInput3 = document.querySelector('#numero_documento');
+        
         var txtInput4 = document.querySelector('#telefono');
+
         var txtInput5 = document.querySelector('#correo');
 
 
