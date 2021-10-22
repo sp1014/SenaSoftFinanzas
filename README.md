@@ -27,7 +27,7 @@ https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 [Sergio Vargas](https://github.com/Sergio-Vargas/)
 
 
-[Esdward Santiago Perez](https://github.com/sp1014)
+[Edward Santiago Perez](https://github.com/sp1014)
 
 
 ## Paso a Paso 📖
