@@ -55,7 +55,7 @@ Instalacion de algunas librerias
 
 
 ## Documentacion
-[Documentacion](https://drive.google.com/drive/u/1/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw) 
+[Documentacion](https://drive.google.com/drive/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw?usp=sharing) 
 ## Colaboradores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
