@@ -6,7 +6,7 @@ _Proyecto enfocado al mundo finaciero__
 
 ### Pre-requisitos 📋
 
-#### Lenguajes
+#### LENGUAJES
 
 ```
 Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
