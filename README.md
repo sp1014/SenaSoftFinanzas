@@ -6,16 +6,19 @@ _Proyecto enfocado para el comercio en liena_
 
 ### Pre-requisitos 📋
 
-_None_
+####Lenguajes
 
 ```
-Desarrollado en PHP,MYSQL,JS,CSS,HTML
+Desarrollado en PHP7 (Version superior a 7),MYSQL,JS,CSS,HTML
 ```
 #### XAMPP 💾
 ```
 https://www.apachefriends.org/es/download.html
 ```
-
+#### OCR
+```
+https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
+```
 ## Colaboladores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
