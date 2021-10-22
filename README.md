@@ -19,6 +19,13 @@ https://www.apachefriends.org/es/download.html
 ```
 https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 ```
+#### PdfParser
+
+```
+https://parzibyte.me/blog/2019/06/16/extraer-texto-imagenes-pdf-php/
+```
+
+
 ## Colaboladores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
