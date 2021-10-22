@@ -23,7 +23,7 @@
                         <i class="mdi mdi-cube-outline bg-primary  text-white"></i>
                     </div>
                     <div>
-                        <h5 class="font-16">Sesiones activas</h5>
+                        <h5 class="font-20">Sesiones activas</h5>
                     </div>
                     <h3 class="mt-4">4</h3>
                     <div class="progress mt-4" style="height: 4px;">
@@ -41,7 +41,7 @@
                         <i class="mdi mdi-briefcase-check bg-success text-white"></i>
                     </div>
                     <div>
-                        <h5 class="font-16">Categorias actuales</h5>
+                        <h5 class="font-20">Categorias actuales</h5>
                     </div>
                     <h3 class="mt-4">2</h3>
                     <div class="progress mt-4" style="height: 4px;">
@@ -59,7 +59,7 @@
                         <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
                     </div>
                     <div>
-                        <h5 class="font-16">Archivos</h5>
+                        <h5 class="font-20">Archivos</h5>
                     </div>
                     <h3 class="mt-4">1</h3>
                     <div class="progress mt-4" style="height: 4px;">
@@ -77,7 +77,7 @@
                         <i class="mdi mdi-buffer bg-danger text-white"></i>
                     </div>
                     <div>
-                        <h5 class="font-16">Categorias nuevas</h5>
+                        <h5 class="font-20">Categorias nuevas</h5>
                     </div>
                     <h3 class="mt-4">1 </h3>
                     <div class="progress mt-4" style="height: 4px;">
@@ -90,68 +90,80 @@
     </div>
     <p> </p>
     <div class="row">
-        <div class="col-xl-6">
-            <div class="card m-b-30">
-                <div class="card-body">
-                    <h4 class="mt-0 header-title mb-4">Usuarios registrados</h4>
-                    <div class="friends-suggestions">
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
+                        <div class="col-xl-6">
+                            <div class="card m-b-30">
+                                <div class="card-body">
+                                    <h4 class="mt-0 header-title mb-4">módulos</h4>
+                                    <div class="friends-suggestions">
+                                        <a href="#" class="friends-suggestions-list">
+                                            <div class="border-bottom position-relative">
+                                                <div class="float-left mb-0 mr-3">
+                                                    <img src="public/Assets/images/Icono.jpg" alt="" class="rounded-circle thumb-md">
+                                                </div>
+                                                <div class="suggestion-icon float-right mt-2 pt-1">
+                                                    <i class="mdi mdi-plus"></i>
+                                                </div>
 
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Edier Hernandez</h5>
-                                    <p class="text-muted">Tel:3134587765</p>
+                                                <div class="desc">
+                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Subir Archivo</h5>
+                                                    <p class="text-muted">3 Friend suggest</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="friends-suggestions-list">
+                                            <div class="border-bottom position-relative">
+                                                <div class="float-left mb-0 mr-3">
+                                                    <img src="assets/images/users/user-3.jpg" alt="" class="rounded-circle thumb-md">
+                                                </div>
+                                                <div class="suggestion-icon float-right mt-2 pt-1">
+                                                    <i class="mdi mdi-plus"></i>
+                                                </div>
+
+                                                <div class="desc">
+                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Consultar Archivo</h5>
+                                                    <p class="text-muted">17 Friend suggest</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="friends-suggestions-list">
+                                            <div class="border-bottom position-relative">
+                                                <div class="float-left mb-0 mr-3">
+                                                    <img src="assets/images/users/user-4.jpg" alt="" class="rounded-circle thumb-md">
+                                                </div>
+                                                <div class="suggestion-icon float-right mt-2 pt-1">
+                                                    <i class="mdi mdi-plus"></i>
+                                                </div>
+
+                                                <div class="desc">
+                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Crear Categorias</h5>
+                                                    <p class="text-muted">12 Friend suggest</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" class="friends-suggestions-list">
+                                            <div class="border-bottom position-relative">
+                                                <div class="float-left mb-0 mr-3">
+                                                    <img src="assets/images/users/user-5.jpg" alt="" class="rounded-circle thumb-md">
+                                                </div>
+                                                <div class="suggestion-icon float-right mt-2 pt-1">
+                                                    <i class="mdi mdi-plus"></i>
+                                                </div>
+
+                                                <div class="desc">
+                                                    <h5 class="font-14 mb-1 pt-2 text-dark">Registrar Usuario</h5>
+                                                    <p class="text-muted">18 Friend suggest</p>
+                                                </div>
+                                            </div>
+                                        </a>
+
+
+                                    </div>
                                 </div>
                             </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Edwar Pérez</h5>
-                                    <p class="text-muted">Tel:3561783452</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                               
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Sergio Vargas</h5>
-                                    <p class="text-muted">Tel:3423567892</p>
-                                </div>
-                            </div>
-                        </a>
-
-                        <a href="#" class="friends-suggestions-list">
-                            <div class="border-bottom position-relative">
-                                
-                                <div class="suggestion-icon float-right mt-2 pt-1">
-                                    <i class="mdi mdi-plus"></i>
-                                </div>
-                                <div class="desc">
-                                    <h5 class="font-14 mb-1 pt-2 text-dark">Pepe Perez</h5>
-                                    <p class="text-muted">Tel:3872138794</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        </div>
 
         <div class="col-xl-6">
             <div class="card m-b-30">
@@ -175,7 +187,7 @@
                         </li>
                         <li class="feed-item pb-1">
                             <p class="text-muted mb-1">Almacena</p>
-                            <p class="font-15 mt-0 mb-2">Almacena la infotmacion de una manera organizada dependiendo su categoria</p>
+                            <p class="font-15 mt-0 mb-2">Almacena la infotrmación de una manera organizada dependiendo su categoria</p>
                         </li>
                     </ol>
                 </div>
