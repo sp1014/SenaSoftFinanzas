@@ -9,10 +9,11 @@ _Proyecto enfocado para el comercio en liena_
 _None_
 
 ```
-Desarrollado en PHP,MYSQL.JS.CSS.HTML
+Desarrollado en PHP,MYSQL,JS,CSS,HTML
 ```
+#### XAMPP 💾
 ```
-XAMPP (https://www.apachefriends.org/es/download.html)
+https://www.apachefriends.org/es/download.html
 ```
 
 ## Colaboladores 🖇️
