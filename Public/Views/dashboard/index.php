@@ -40,8 +40,7 @@
     <div class="card">
         <div class="card-heading p-4">
             <div class="mini-stat-icon float-right">
-                <i class="fab fa-uncharted bg-success text-white"></i>
-                <i class="fab fa-uncharted"></i>
+            <i class="fas fa-file-code  bg-primary  text-white"></i>
             </div>
             <div>
                 <h5 class="font-17">Interfaz</h5>
@@ -59,7 +58,7 @@
     <div class="card">
         <div class="card-heading p-4">
             <div class="mini-stat-icon float-right">
-                <i class="mdi mdi-tag-text-outline bg-warning text-white"></i>
+                <i class="fas fa-user-check bg-warning text-white"></i>
             </div>
             <div>
                 <h5 class="font-17">Fácil</h5>
@@ -77,7 +76,7 @@
     <div class="card">
         <div class="card-heading p-4">
             <div class="mini-stat-icon float-right">
-                <i class="mdi mdi-buffer bg-danger text-white"></i>
+                <i class="fas fa-hourglass-start bg-danger text-white"></i>
             </div>
             <div>
                 <h5 class="font-17">Tiempo</h5>
