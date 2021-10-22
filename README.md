@@ -1,4 +1,4 @@
-# FinancialFast
+# FinancialFast <img src="Public/Assets/images/Logo.png" alt="FinancialFast"/>
 
 _Proyecto enfocado al mundo finaciero__
 
