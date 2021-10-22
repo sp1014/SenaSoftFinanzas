@@ -54,8 +54,8 @@ Instalacion de algunas librerias
 [Paso a Paso Instalacion](https://docs.google.com/document/d/1mwk7U6qaFJT4RGGJixyD52swVmn3I8XH/edit?usp=sharing&ouid=109675321760699536418&rtpof=true&sd=true)
 
 
-## Documentacion
-[Documentacion](https://drive.google.com/drive/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw?usp=sharing) 
+## Documentación
+[Documentación](https://drive.google.com/drive/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw?usp=sharing) 
 ## Colaboradores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
