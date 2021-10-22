@@ -1,7 +1,9 @@
-const reviewRepositoryFiles = () => {
+const reviewRepositoryFiles = async () => {
     const url = `${base_url}?c=clienteexterno&a=parser`;
     try {
-        fetch(url);
+        const req = await fetch(url);
+        const data = await req.json();
+        console.log(data);
     } catch (error) {
         console.error(error);
     }
