@@ -247,10 +247,6 @@
       </div>
     </div>
   </footer><!-- End Footer -->
-
-  <?php
-  require_once('Public/Views/components/scripts.php');
-  ?>
 </body>
 
 </html>

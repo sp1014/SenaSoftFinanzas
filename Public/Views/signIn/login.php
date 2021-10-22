@@ -26,11 +26,11 @@
                     </div>
                     <h5 class="font-18 text-center">Iniciar Sesión</h5>
                     <form class="form-horizontal m-t-30" id="signIn">
-                   
-                    <div class="form-group">
-                   <label> Seleccione la Voz:</label> 
-                   <select  id='voiceList' class="form-control"> 
-                    </div>
+
+                        <div class="form-group">
+                            <label> Seleccione la Voz:</label>
+                            <select id='voiceList' class="form-control">
+                        </div>
 
                         <div class="form-group">
                             <label> Seleccione la Voz:</label>
@@ -39,13 +39,13 @@
 
                         </select>
                         <div class="form-group">
-                                <label>Correo</label>
-                                <input class="form-control" type="email" id="txtEmail" name="txtEmail" placeholder="ejemplo@micorreo" required parsley-type="email">
+                            <label>Correo</label>
+                            <input class="form-control" type="email" id="txtEmail" name="txtEmail" placeholder="ejemplo@micorreo" required parsley-type="email">
                         </div>
 
                         <div class="form-group">
-                                <label>Contraseña</label>
-                                <input class="form-control" type="password" id="txtPass" name="txtPass" placeholder="Contraseña" required>
+                            <label>Contraseña</label>
+                            <input class="form-control" type="password" id="txtPass" name="txtPass" placeholder="Contraseña" required>
                         </div>
 
                         <div class="form-group text-center m-t-20">
@@ -59,9 +59,6 @@
         </div>
     </div>
     <!-- END wrapper -->
-    <?php
-    require_once('Public/Views/components/scripts.php');
-    ?>
     <!-- jQuery  -->
     <script src="Public/Assets/js/jquery.min.js"></script>
     <script src="Public/Assets/js/bootstrap.bundle.min.js"></script>
@@ -73,6 +70,9 @@
     <script src="Public/Assets/plugins/parsleyjs/parsley.min.js"></script>
     <!-- App js -->
     <script src="Public/Assets/js/app.js" defer></script>
+    <script>
+        const base_url = 'http://localhost/SenaSoftFinanzas/';
+    </script>
     <script src="Public/Assets/js/functions/signIn.js"></script>
 
     <script defer>
