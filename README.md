@@ -18,6 +18,8 @@ https://www.apachefriends.org/es/download.html
 nos facilita la gestión de bases de datos MySQL, el servidor web Apache 
 
 ```
+[Paso a Paso Instalacion](https://docs.google.com/document/d/1Bhw7Dh78Y_3mRGV6LUHsdlj1JVczSdwI/edit)
+
 #### OCR 📂
 ```
 https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
