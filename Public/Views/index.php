@@ -153,8 +153,8 @@
 
             <div class="icon-box">
               <div class="icon"><i class="far fa-file-alt"></i></div>
-              <h4 class="title"><a href="">Consultas de archivos PDF por categorias</a></h4>
-              <p class="description">Las consultas que se evidenciaran seran correspondidas por el sistema de una forma adecuadas,<br> eficiente y rápida.</p>
+              <h4 class="title"><a href="">Consultas de archivos PDF por categorías</a></h4>
+              <p class="description">Las consultas que se evidenciarán serán correspondidas por el sistema de una forma adecuadas,<br> eficiente y rápida.</p>
             </div>
 
           </div>
