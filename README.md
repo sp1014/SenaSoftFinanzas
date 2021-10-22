@@ -38,7 +38,7 @@ https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 3. Abrir el navegador e ir al local host (http://localhost/SenaSoftFinanzas/)
 ```
 
-## Autores ✒️
+## © 2021 Financialfast ✒️
 
 ---
 ⌨️ Financial Fast (https://github.com/sp1014/SenaSoftFinanzas.git) 😊
