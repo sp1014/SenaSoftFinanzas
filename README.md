@@ -30,8 +30,13 @@ https://parzibyte.me/blog/2019/06/16/extraer-texto-imagenes-pdf-php/
 Realiza la extraccion de texto en images y pdf
 ```
 
+#### COMPOSER 🖱
+```
+https://getcomposer.org
+Instalacion de algunas librerias 
+```
 
-## Colaboladores 🖇️
+## Colaboradores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
 
