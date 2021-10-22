@@ -30,7 +30,7 @@ https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 [Esdward Santiago Perez](https://github.com/sp1014)
 
 
-## Wiki 📖
+## Paso a Paso 📖
 
 ```
 1. Clonar el proyecto SenaSoftFinanzas (https://github.com/sp1014/SenaSoftFinanzas.git) en la carpeta htdocs (C:\xampp\htdocs\SenaSoftFinanzas)
