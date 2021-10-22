@@ -1,4 +1,4 @@
-# iMake
+# FinancialFast
 
 _Proyecto enfocado para el comercio en liena_
 
