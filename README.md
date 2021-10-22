@@ -25,19 +25,23 @@ nos facilita la gestión de bases de datos MySQL, el servidor web Apache
 https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 nos ayuda al reconocimiento de texto en imágenes
 ```
-[Paso a Paso Instalacion](https://docs.google.com/document/d/1Bhw7Dh78Y_3mRGV6LUHsdlj1JVczSdwI/edit)
+[Paso a Paso Instalacion](https://docs.google.com/document/d/1lkkpoQ8DBegIkMFHtVOeULg25KREor0J/edit?usp=sharing&ouid=109675321760699536418&rtpof=true&sd=true)
 #### PDFPARSER 📲
 
 ```
 https://parzibyte.me/blog/2019/06/16/extraer-texto-imagenes-pdf-php/
 Realiza la extraccion de texto en images y pdf
 ```
+[Paso a Paso Instalacion](https://docs.google.com/document/d/1gwBANFTu3Dk8tyZ3m6CUVAsMbi_NGr5p/edit?usp=sharing&ouid=109675321760699536418&rtpof=true&sd=true)
 
 #### COMPOSER 🖱
 ```
 https://getcomposer.org
 Instalacion de algunas librerias 
 ```
+[Paso a Paso Instalacion](https://docs.google.com/document/d/1mwk7U6qaFJT4RGGJixyD52swVmn3I8XH/edit?usp=sharing&ouid=109675321760699536418&rtpof=true&sd=true)
+
+
 ## Documentacion
 [Documentacion](https://drive.google.com/drive/u/1/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw) 
 ## Colaboradores 🖇️
