@@ -35,7 +35,8 @@ Realiza la extraccion de texto en images y pdf
 https://getcomposer.org
 Instalacion de algunas librerias 
 ```
-
+## Documentacion
+[Documentacion](https://drive.google.com/drive/u/1/folders/1vkT_J_QQRNWZl_mo3U1W9xRrAuEL4mDw) 
 ## Colaboradores 🖇️
 
 [Edier Heraldo Hernández](https://github.com/eideard-hm/) 
