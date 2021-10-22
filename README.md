@@ -32,6 +32,11 @@ https://parzibyte.me/blog/2019/05/11/instalar-tesseract-ocr-windows-10/
 
 ## Wiki 📖
 
+```
+1. Clonar el proyecto SenaSoftFinanzas (https://github.com/sp1014/SenaSoftFinanzas.git) en la carpeta htdocs (C:\xampp\htdocs\SenaSoftFinanzas)
+2. Ejecutar la aplicacion de XAMPP e inicializar Apache y MySql
+3. Abrir el navegador e ir al local host (http://localhost/SenaSoftFinanzas/)
+```
 
 ## Autores ✒️
 
