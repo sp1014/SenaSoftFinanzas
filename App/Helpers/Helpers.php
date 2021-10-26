@@ -134,6 +134,7 @@ function imageToText2(string $img_base_64)
             return "Error" . $codigoSalida;
         }
     }
+    imagedestroy($im);
 }
 
 function format($format)
